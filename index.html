@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kumataWorld!</title>
+  <meta name="description" content="kumata のゲームがあそべるサイト。まなぶゲームとあそぶゲームがいっぱい!">
+  <link rel="icon" href="assets/kumata.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <img src="assets/kumata.png" alt="kumata">
+        <span class="logo-text">kumata<span class="w">World</span><span class="bang">!</span></span>
+      </a>
+      <nav class="nav">
+        <a class="home" href="index.html">ホーム</a>
+        <a class="edu" href="#edu">まなぶ</a>
+        <a class="play" href="#play">あそぶ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="bubble">やあ!ぼく kumata だよ!</div>
+        <h1>kumata<span class="w">World</span><span class="bang">!</span></h1>
+        <p class="lead">まなべる ゲームも、あそべる ゲームも、ぜんぶ ここに!<br>
+          PC・iPhone なら ブラウザで、Android なら アプリで あそべるよ。</p>
+        <div class="hero-buttons">
+          <a class="btn edu big" href="#edu">📚 まなぶ ゲーム</a>
+          <a class="btn play big" href="#play">🎮 あそぶ ゲーム</a>
+        </div>
+      </div>
+      <div class="hero-bear">
+        <div class="blob"></div>
+        <img src="assets/kumata.png" alt="手をふる kumata">
+        <span class="deco d1">⭐</span>
+        <span class="deco d2">🎈</span>
+        <span class="deco d3">✨</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-filter="all">ぜんぶ</button>
+      <button class="tab" data-filter="edu">📚 まなぶ</button>
+      <button class="tab" data-filter="play">🎮 あそぶ</button>
+    </div>
+
+    <section class="section edu" id="edu" data-cat="edu">
+      <div class="section-head">
+        <div class="section-icon">📚</div>
+        <h2>まなぶ ゲーム<small>あそびながら かしこくなろう!</small></h2>
+        <span class="section-count" data-count="edu">0 こ</span>
+      </div>
+      <div class="grid" data-grid="edu"></div>
+    </section>
+
+    <section class="section play" id="play" data-cat="play">
+      <div class="section-head">
+        <div class="section-icon">🎮</div>
+        <h2>あそぶ ゲーム<small>おもいっきり たのしもう!</small></h2>
+        <span class="section-count" data-count="play">0 こ</span>
+      </div>
+      <div class="grid" data-grid="play"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/kumata.png" alt="">
+    <div>© <span id="year"></span> kumataWorld!</div>
+  </footer>
+
+  <script src="js/games.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
