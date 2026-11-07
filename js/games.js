@@ -149,7 +149,7 @@ window.KUMATA_GAMES = [
         { key: "タップ", action: "もう一度 / つぎの面へ / 面えらび" },
       ],
     },
-    age: "小学生〜", players: "1人", updated: "2026/11/02",
+    age: "小学生〜", players: "1人", updated: "2026/11/07",
   },
   {
     id: "SkiBigAir",
