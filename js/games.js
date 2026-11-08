@@ -247,7 +247,8 @@ window.KUMATA_GAMES = [
         { key: "タップ", action: "回転ストップ" },
       ],
     },
-    age: "小学生〜", players: "1人", updated: "2026/10/24",
+    apk: APK_RELEASE + "SkiBigAir.apk",
+    age: "小学生〜", players: "1人", updated: "2026/11/08",
   },
   {
     id: "BallHockey",
