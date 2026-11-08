@@ -2,28 +2,35 @@
 (function () {
   const games = window.KUMATA_GAMES || [];
 
+  const counter = window.KumataCounter;
+
   function card(game) {
     const cat = CATEGORIES[game.category] || CATEGORIES.play;
+    const detail = `game.html?id=${encodeURIComponent(game.id)}`;
+    const webgl = webglUrl(game);
+    // 「ブラウザ」→ 詳細ページで すぐ ゲーム開始 /「Android」→ 詳細ページの ダウンロード欄
     const pfs = [];
-    if (webglUrl(game)) pfs.push("🌐 ブラウザ");
-    if (game.apk) pfs.push("🤖 Android");
-    const thumb = thumbInner(game);
+    if (webgl) pfs.push(`<a class="pf pf-link" href="${detail}&play=1" title="ブラウザで あそぶ">🌐 ブラウザ</a>`);
+    if (game.apk) pfs.push(`<a class="pf pf-link" href="${detail}#android" title="Android ばんを ダウンロード">🤖 Android</a>`);
+
+    const stats = [];
+    if (webgl) stats.push(`<span class="stat" data-stat="plays">▶ あそばれた <b>-</b> かい</span>`);
+    if (game.apk) stats.push(`<span class="stat" data-stat="downloads">⬇ ダウンロード <b>-</b> かい</span>`);
 
     return `
-      <a class="card" href="game.html?id=${encodeURIComponent(game.id)}">
+      <article class="card" data-game-id="${esc(game.id)}">
         <div class="thumb" style="${thumbStyle(game)}">
-          ${thumb}
+          ${thumbInner(game)}
           <span class="badge ${game.category}">${cat.icon} ${cat.label}</span>
           ${isReady(game) ? "" : `<span class="badge soon">じゅんびちゅう</span>`}
         </div>
         <div class="card-body">
-          <h3>${esc(game.title)}</h3>
+          <h3><a class="card-link" href="${detail}">${esc(game.title)}</a></h3>
           <p>${esc(game.tagline)}</p>
-          <div class="platforms">
-            ${pfs.map(p => `<span class="pf">${p}</span>`).join("")}
-          </div>
+          ${counter && counter.enabled && stats.length ? `<div class="stats">${stats.join("")}</div>` : ""}
+          <div class="platforms">${pfs.join("")}</div>
         </div>
-      </a>`;
+      </article>`;
   }
 
   for (const key of Object.keys(CATEGORIES)) {
@@ -36,6 +43,27 @@
         ? list.map(card).join("")
         : `<div class="empty">ゲームは もうすぐ とうじょう!</div>`;
     }
+  }
+
+  // ---------- 数を 表示 ----------
+  if (counter && counter.enabled) {
+    counter.getAll().then(all => {
+      if (!all) return;
+      document.querySelectorAll(".card[data-game-id]").forEach(el => {
+        const id = el.dataset.gameId;
+        el.querySelectorAll("[data-stat]").forEach(s => {
+          const v = (all[s.dataset.stat] || {})[id];
+          s.querySelector("b").textContent = counter.fmt(v);
+        });
+      });
+    });
+
+    const box = document.getElementById("visit-counter");
+    counter.visit().then(n => {
+      if (n == null || !box) return;
+      box.querySelector("b").textContent = counter.fmt(n);
+      box.hidden = false;
+    });
   }
 
   // タブで「ぜんぶ / まなぶ / あそぶ」を切りかえ

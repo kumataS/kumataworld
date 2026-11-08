@@ -228,6 +228,29 @@ img { max-width: 100%; display: block; }
   font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 8px;
   background: var(--cream); border: 2px solid var(--bear-light);
 }
+/* カード全体は タイトルの リンクで 詳細ページへ。ボタンだけ べつの リンク */
+.card { position: relative; }
+.card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.card-link:focus-visible { outline: none; }
+.card:focus-within { outline: 4px solid var(--yellow); outline-offset: 2px; }
+.pf-link {
+  position: relative; z-index: 2;
+  box-shadow: 0 3px 0 var(--bear-light); transition: transform .1s, background .1s;
+}
+.pf-link:hover { background: var(--yellow); border-color: var(--ink); transform: translateY(-2px); }
+
+/* あそばれた回数・ダウンロード数 */
+.stats { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: -4px 0 10px; font-size: 0.8rem; font-weight: 800; color: var(--ink-soft); }
+.stats b { color: var(--ink); font-size: 0.95rem; }
+
+/* サイトの 訪問カウンター */
+.visit-counter {
+  display: inline-block; margin-top: 16px;
+  background: #fff; border: 3px solid var(--ink); border-radius: 999px;
+  padding: 4px 16px; font-weight: 800; box-shadow: var(--shadow);
+}
+.visit-counter[hidden] { display: none; }
+.visit-counter b { font-family: "Fredoka", sans-serif; font-size: 1.3rem; color: var(--pink); margin: 0 2px; }
 
 .empty {
   background: #fff; border: 4px dashed var(--bear-light); border-radius: var(--radius);
@@ -343,7 +366,9 @@ img { max-width: 100%; display: block; }
 }
 
 /* Download / play side panel */
-.get-panel { text-align: center; }
+.get-panel { text-align: center; scroll-margin-top: 90px; }
+.get-panel.flash { animation: kumata-flash 1.2s ease 2; }
+@keyframes kumata-flash { 50% { box-shadow: 0 0 0 6px var(--yellow); } }
 .get-panel .device {
   display: inline-block; background: var(--cream); border-radius: 999px;
   padding: 2px 12px; font-weight: 800; font-size: 0.85rem; margin-bottom: 12px;

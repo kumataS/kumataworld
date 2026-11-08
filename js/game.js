@@ -82,7 +82,15 @@
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   }
 
+  const counter = window.KumataCounter;
+  let counted = false;
+
   function startGame() {
+    // あそばれた回数を +1(この ページで 1回だけ)
+    if (counter && !counted) {
+      counted = true;
+      counter.play(game.id).then(n => setStat("plays", n));
+    }
     stage.innerHTML = `<iframe src="${esc(webgl)}" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>`;
     const frame = stage.querySelector("iframe");
     // できるだけ はやく(ページの 中身が できた時点で)スタイルを たす。load でも 念のため。
@@ -158,6 +166,10 @@
   get.querySelectorAll("[data-start]").forEach(b => b.addEventListener("click", () => {
     startGame();
   }));
+  // APK の ダウンロード回数を +1
+  get.querySelectorAll("a[download]").forEach(a => a.addEventListener("click", () => {
+    if (counter) counter.download(game.id).then(n => setStat("downloads", n));
+  }));
 
   // ---------- スクリーンショット ----------
   const shots = game.screenshots || [];
@@ -209,5 +221,40 @@
     ["あそべる たんまつ", [webgl && "ブラウザ(PC・iPhone)", game.apk && "Android"].filter(Boolean).join(" / ") || "じゅんびちゅう"],
     ["こうしん日", game.updated || "-"],
   ];
-  $("#info-table").innerHTML = rows.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("");
+  const statRows = [];
+  if (counter && counter.enabled) {
+    if (webgl) statRows.push(["plays", "あそばれた かいすう"]);
+    if (game.apk) statRows.push(["downloads", "ダウンロード かいすう"]);
+  }
+  $("#info-table").innerHTML =
+    rows.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("") +
+    statRows.map(([key, label]) => `<tr><th>${esc(label)}</th><td data-stat="${key}">-</td></tr>`).join("");
+
+  function setStat(key, n) {
+    if (n == null) return;
+    const td = document.querySelector(`#info-table [data-stat="${key}"]`);
+    if (td) td.textContent = `${counter.fmt(n)} かい`;
+  }
+  if (statRows.length) {
+    counter.getAll().then(all => {
+      if (!all) return;
+      statRows.forEach(([key]) => {
+        const td = document.querySelector(`#info-table [data-stat="${key}"]`);
+        // 先に +1 した 数が 入っていたら そのまま
+        if (td && td.textContent === "-") setStat(key, (all[key] || {})[game.id] || 0);
+      });
+    });
+  }
+
+  // ---------- 一覧から きたとき ----------
+  // ?play=1   … 一覧の「ブラウザ」ボタン → すぐ ゲーム開始
+  // #android  … 一覧の「Android」ボタン → ダウンロード欄へ
+  if (new URLSearchParams(location.search).get("play") === "1" && webgl) {
+    startGame();
+  } else if (location.hash === "#android" && game.apk) {
+    const help = get.querySelector("details.apk-help");
+    if (help) help.open = true;
+    get.classList.add("flash");
+    requestAnimationFrame(() => get.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
 })();
