@@ -13,6 +13,9 @@
     const pfs = [];
     if (webgl) pfs.push(`<a class="pf pf-link" href="play.html?id=${qid}" title="ブラウザで あそぶ">🌐 ブラウザ</a>`);
     if (game.apk) pfs.push(`<a class="pf pf-link" href="download.html?id=${qid}" title="Android ばんを ダウンロード">🤖 Android</a>`);
+    // かんそうの 数(右はし)→ 詳細ページの かんそう欄へ
+    const reviews = window.KumataReviews;
+    if (reviews && reviews.enabled) pfs.push(`<a class="pf pf-link pf-review" href="${detail}#reviews" title="みんなの かんそう"><span aria-hidden="true">💬</span> <b data-review-count>-</b><span class="sr-only"> けんの かんそう</span></a>`);
 
     const stats = [];
     if (webgl) stats.push(`<span class="stat" data-stat="plays">▶ あそばれた <b>-</b> かい</span>`);
@@ -58,6 +61,16 @@
         });
       });
     });
+
+    // かんそうの 数
+    if (window.KumataReviews && KumataReviews.enabled) {
+      KumataReviews.counts(games.map(g => g.id)).then(c => {
+        document.querySelectorAll(".card[data-game-id]").forEach(el => {
+          const b = el.querySelector("[data-review-count]");
+          if (b) b.textContent = c ? c[el.dataset.gameId] || 0 : "-";
+        });
+      });
+    }
 
     const box = document.getElementById("visit-counter");
     counter.visit().then(n => {
