@@ -1,0 +1,3 @@
+# APK は GitHub Releases に おく(サイトの 容量 1GB を こえないように)
+games/*/*.apk
+!games/JumpSurvival/JumpSurvival.apk

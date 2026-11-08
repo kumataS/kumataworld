@@ -12,10 +12,14 @@
    thumb    : (書かなくてOK)アイコン以外の画像を つかいたいときだけ
    screenshots : スクリーンショット画像の配列
    webgl    : (書かなくてOK)WebGL がまだ ないゲームは webgl: "" で「じゅんびちゅう」
-   apk      : APK のダウンロードURL(GitHub Releases など。空ならボタンなし)
+   apk      : APK のダウンロードURL(APK_RELEASE + "ファイル名"。空ならボタンなし)
    controls : { pc: [{key, action}], touch: [{key, action}] }
    age / players / updated : 情報欄
    ========================================================= */
+// Android の APK は GitHub Releases(タグ android)に おく。サイトの 容量(1GB)に 数えられないため。
+// https://github.com/kumataS/kumataworld/releases/tag/android
+const APK_RELEASE = "https://github.com/kumataS/kumataworld/releases/download/android/";
+
 window.KUMATA_GAMES = [
   // ======================== まなぶ ゲーム ========================
   {
@@ -30,6 +34,7 @@ window.KUMATA_GAMES = [
       "正解は +100点、まちがいは -10点。1問の 制限時間は 1〜99秒で かえられるよ。目指せ 47問 ぜんぶ正解!",
     emoji: "🗾", color: "#45b7ff",
     screenshots: [],
+    apk: APK_RELEASE + "JapanesePrefecture250601.apk",
     controls: {
       pc: [
         { key: "クリック", action: "こたえを えらぶ / ヒントボールを ひらく" },
@@ -56,6 +61,7 @@ window.KUMATA_GAMES = [
       "ふつうモードは 195か国から 47問。「195ALL」モードなら 195か国 ぜんぶに チャレンジ!オンラインランキングも あるよ。",
     emoji: "🌏", color: "#2bc4b4",
     screenshots: [],
+    apk: APK_RELEASE + "AroundtheWorld261021-01.apk",
     controls: {
       pc: [
         { key: "クリック", action: "こたえを えらぶ / ヒントボールを ひらく" },
@@ -82,6 +88,7 @@ window.KUMATA_GAMES = [
       "大きな式で 消すほど 高得点!頭の体操にも 計算の練習にも ぴったり。",
     emoji: "➕", color: "#5fd068",
     screenshots: [],
+    apk: APK_RELEASE + "tasdas3D_android3.apk",
     controls: {
       pc: [
         { key: "← →", action: "ブロックを 左右に 動かす" },
@@ -109,6 +116,7 @@ window.KUMATA_GAMES = [
       "全13ステージの「ステージモード」と、枠や制限時間を 自分で えらべる「自由モード」。オンラインランキングも あるよ!",
     emoji: "🔷", color: "#a77bff",
     screenshots: [],
+    apk: APK_RELEASE + "Wakuwaku.apk",
     controls: {
       pc: [
         { key: "ドラッグ", action: "図形を 枠に 入れる・動かす" },
@@ -127,7 +135,7 @@ window.KUMATA_GAMES = [
   {
     id: "DiceCalculation",
     title: "Dice Calculation",
-    // アイコンは games/DiceCalculation/DiceCalculation_Icon.png(.jpg)を おけば 自動で 出る
+    icon: "DiceCaluculation_icon.jpg",
     category: "edu",
     tagline: "サイコロで 式を つくって ターゲットの 数に しよう!",
     description:
@@ -248,6 +256,7 @@ window.KUMATA_GAMES = [
       "ソロ(AI対戦)・デュオ(2人)・トリオ(3人)の オンライン対戦。「待った」の あり / なしも えらべるよ。",
     emoji: "♟️", color: "#9c7bff",
     screenshots: [],
+    apk: APK_RELEASE + "hasamin260505.apk",
     controls: {
       pc: [
         { key: "クリック", action: "自分の駒を えらぶ" },
@@ -274,6 +283,7 @@ window.KUMATA_GAMES = [
       "追いかけてくる スライムは 岩で はさんで やっつけろ!11×11マスから 101×101マスの 大迷路まで、全10ステージ。",
     emoji: "🦍", color: "#8d6e63",
     screenshots: [],
+    apk: APK_RELEASE + "PushBlock261015-01.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "移動(岩に向かうと おす)" },
@@ -299,6 +309,7 @@ window.KUMATA_GAMES = [
       "スライムは ゴリタが 1歩 動くたびに 1歩 動く ターン制。落とし穴に ハメながら ゴールを めざそう!全10ステージ。",
     emoji: "🦍", color: "#ffd23f",
     screenshots: [],
+    apk: APK_RELEASE + "GoritaDaidasso2.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "移動" },
@@ -327,6 +338,7 @@ window.KUMATA_GAMES = [
       "全10ステージ。少ない 手数ほど 上位の ランキングも あるよ。",
     emoji: "🐱", color: "#ff6b9d",
     screenshots: [],
+    apk: APK_RELEASE + "CatsWayHome.apk",
     controls: {
       pc: [
         { key: "矢印キー", action: "ねこが 1マス 移動" },
@@ -355,6 +367,7 @@ window.KUMATA_GAMES = [
       "盤は 5×5 → 7×7 → 9×9 と だんだん 大きくなるよ。",
     emoji: "🏠", color: "#ffb347",
     screenshots: [],
+    apk: APK_RELEASE + "CatsWayHome2.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ねこが 歩く" },
