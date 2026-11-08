@@ -21,7 +21,7 @@ window.KUMATA_GAMES = [
   {
     id: "いちどういっとにふよんじゅうさんけん",
     title: "いちどういっと にふよんじゅうさんけん",
-    icon: "",  // ← アイコンを入れたら ファイル名を書く
+    icon: "いちどういっとにふよんじゅうさんけん_icon.jpg",
     category: "edu",
     tagline: "都道府県の かたちを見て 名前を当てよう!",
     description:
@@ -149,6 +149,7 @@ window.KUMATA_GAMES = [
         { key: "タップ", action: "もう一度 / つぎの面へ / 面えらび" },
       ],
     },
+    apk: "games/JumpSurvival/JumpSurvival.apk",
     age: "小学生〜", players: "1人", updated: "2026/11/07",
   },
   {
