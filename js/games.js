@@ -124,6 +124,33 @@ window.KUMATA_GAMES = [
     },
     age: "小学生〜", players: "1人", updated: "2026/11/01",
   },
+  {
+    id: "DiceCalculation",
+    title: "Dice Calculation",
+    // アイコンは games/DiceCalculation/DiceCalculation_Icon.png(.jpg)を おけば 自動で 出る
+    category: "edu",
+    tagline: "サイコロで 式を つくって ターゲットの 数に しよう!",
+    description:
+      "サイコロを ころがして 出た目を ならべ、「+」「−」の サイコロと くみあわせて 式を つくろう!\n" +
+      "となりに ならんだ 目は「1 と 3 → 13」のように 大きな数に なるよ。式の こたえ(Result)を ターゲット(Target)の 数に できたら クリア!\n" +
+      "LEVEL 1 は 1本の 式、LEVEL 2 は 5×5 の たて・よこ 10本、LEVEL 3 は 5×10 の 15本に チャレンジ。",
+    emoji: "🎲", color: "#7b8cff",
+    screenshots: [],
+    controls: {
+      pc: [
+        { key: "ドラッグ", action: "サイコロを 上下左右に ころがして 目を かえる" },
+        { key: "クリック", action: "「+」と「−」を きりかえる" },
+        { key: "+−を ドラッグ", action: "となりの サイコロと 入れかえる" },
+        { key: "ReStart", action: "あたらしい もんだいで やりなおす" },
+      ],
+      touch: [
+        { key: "スワイプ", action: "サイコロを 上下左右に ころがして 目を かえる" },
+        { key: "タップ", action: "「+」と「−」を きりかえる" },
+        { key: "+−を スワイプ", action: "となりの サイコロと 入れかえる" },
+      ],
+    },
+    age: "小学生〜", players: "1人", updated: "2026/10/31",
+  },
 
   // ======================== あそぶ ゲーム ========================
   {
