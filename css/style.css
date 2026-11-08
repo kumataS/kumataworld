@@ -255,7 +255,7 @@ img { max-width: 100%; display: block; }
 .detail-head h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; }
 .detail-head .badge { position: static; font-size: 0.95rem; }
 
-.detail-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: start; }
+.detail-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 24px; align-items: start; }
 
 .panel {
   background: #fff; border: 4px solid var(--ink); border-radius: var(--radius);
@@ -266,11 +266,16 @@ img { max-width: 100%; display: block; }
 }
 
 /* Play area */
+/* --ar / --arn は game.js が ゲームの 縦横比(例 540 / 960)を 入れる。
+   枠は その比率で、画面の高さ(ヘッダーぶん を ひく)に おさまる 大きさに する */
 .stage {
-  position: relative; aspect-ratio: 16 / 9; background: #222;
+  --ar: 16 / 9; --arn: 1.7778; --stage-max-h: calc(100vh - 110px);
+  position: relative; aspect-ratio: var(--ar); background: #222;
+  width: 100%; max-width: calc(var(--stage-max-h) * var(--arn)); margin: 0 auto 14px;
   border: 4px solid var(--ink); border-radius: var(--radius); overflow: hidden;
-  box-shadow: var(--shadow-lg); margin-bottom: 14px;
+  box-shadow: var(--shadow-lg);
 }
+@supports (height: 100dvh) { .stage { --stage-max-h: calc(100dvh - 110px); } }
 .stage iframe { width: 100%; height: 100%; border: 0; display: block; background: #000; }
 .stage-cover {
   position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
@@ -285,7 +290,21 @@ img { max-width: 100%; display: block; }
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   border-radius: 24px; border: 4px solid var(--ink); box-shadow: 0 6px 0 rgba(0,0,0,.25);
 }
-.stage:fullscreen { border: 0; border-radius: 0; }
+/* ぜんがめん:黒い背景の まんなかに、縦横比を たもって 最大で 表示 */
+.stage:fullscreen {
+  border: 0; border-radius: 0; max-width: none; aspect-ratio: auto;
+  display: grid; place-items: center; background: #000 !important;
+}
+.stage:fullscreen iframe {
+  width: min(100vw, calc(100vh * var(--arn))); height: auto; aspect-ratio: var(--ar);
+}
+.stage:-webkit-full-screen {
+  border: 0; border-radius: 0; max-width: none; aspect-ratio: auto;
+  display: grid; place-items: center; background: #000 !important;
+}
+.stage:-webkit-full-screen iframe {
+  width: min(100vw, calc(100vh * var(--arn))); height: auto; aspect-ratio: var(--ar);
+}
 .stage-tools { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
 .stage-tools .btn { font-size: 0.95rem; padding: 8px 16px; }
 
@@ -346,7 +365,7 @@ details.apk-help ol { padding-left: 20px; margin: 8px 0 0; font-size: 0.9rem; }
   .bubble::after { display: none; }
   .hero-bear { order: -1; }
   .hero-bear img { width: min(260px, 70%); }
-  .detail-grid { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .logo-text { font-size: 1.3rem; }
