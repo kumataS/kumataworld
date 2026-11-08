@@ -10,5 +10,5 @@
      - 公開サイトでは 数字を 出さない
    ========================================================= */
 window.KUMATA_COUNTER_CONFIG = {
-  databaseURL: "",
+  databaseURL: "https://kumataworld-default-rtdb.asia-southeast1.firebasedatabase.app",
 };
