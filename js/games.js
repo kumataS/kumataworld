@@ -165,6 +165,7 @@ window.KUMATA_GAMES = [
       "LEVEL 1 は 1本の 式、LEVEL 2 は 5×5 の たて・よこ 10本、LEVEL 3 は 5×10 の 15本に チャレンジ。",
     emoji: "🎲", color: "#7b8cff",
     screenshots: [],
+    apk: APK_RELEASE + "DiceCalculation.apk",
     controls: {
       pc: [
         { key: "ドラッグ", action: "サイコロを 上下左右に ころがして 目を かえる" },
