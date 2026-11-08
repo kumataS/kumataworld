@@ -8,10 +8,11 @@
     const cat = CATEGORIES[game.category] || CATEGORIES.play;
     const detail = `game.html?id=${encodeURIComponent(game.id)}`;
     const webgl = webglUrl(game);
-    // 「ブラウザ」→ 詳細ページで すぐ ゲーム開始 /「Android」→ 詳細ページの ダウンロード欄
+    // 「ブラウザ」→ ゲーム画面(play.html)/「Android」→ ダウンロード画面(download.html)
+    const qid = encodeURIComponent(game.id);
     const pfs = [];
-    if (webgl) pfs.push(`<a class="pf pf-link" href="${detail}&play=1" title="ブラウザで あそぶ">🌐 ブラウザ</a>`);
-    if (game.apk) pfs.push(`<a class="pf pf-link" href="${detail}#android" title="Android ばんを ダウンロード">🤖 Android</a>`);
+    if (webgl) pfs.push(`<a class="pf pf-link" href="play.html?id=${qid}" title="ブラウザで あそぶ">🌐 ブラウザ</a>`);
+    if (game.apk) pfs.push(`<a class="pf pf-link" href="download.html?id=${qid}" title="Android ばんを ダウンロード">🤖 Android</a>`);
 
     const stats = [];
     if (webgl) stats.push(`<span class="stat" data-stat="plays">▶ あそばれた <b>-</b> かい</span>`);

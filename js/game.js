@@ -56,25 +56,6 @@
     }).catch(() => {});
   }
 
-  // Unity の テンプレートは canvas を 固定の px で 表示するので、
-  // iframe の中の ページに スタイルを たして、canvas を 枠いっぱいに ひろげる(同じサイトなので さわれる)
-  const FIT_CSS = `
-    html, body { margin: 0 !important; padding: 0 !important; width: 100% !important; height: 100% !important; overflow: hidden !important; background: #000 !important; }
-    #unity-container { position: fixed !important; inset: 0 !important; left: 0 !important; top: 0 !important;
-      width: 100% !important; height: 100% !important; transform: none !important; }
-    #unity-canvas { width: 100% !important; height: 100% !important; display: block !important; }
-    #unity-footer { display: none !important; }`;
-  function fitInsideFrame(frame) {
-    try {
-      const doc = frame.contentDocument;
-      if (!doc || !doc.head || doc.getElementById("kumata-fit")) return;
-      const style = doc.createElement("style");
-      style.id = "kumata-fit";
-      style.textContent = FIT_CSS;
-      doc.head.appendChild(style);
-    } catch (e) { /* べつのサイトの ゲームなら なにもしない */ }
-  }
-
   // ゲームを はじめたら、枠が ヘッダーの すぐ下に くるように スクロール
   function scrollToStage() {
     const headerH = header ? header.getBoundingClientRect().height : 0;
@@ -92,15 +73,7 @@
       counter.play(game.id).then(n => setStat("plays", n));
     }
     stage.innerHTML = `<iframe src="${esc(webgl)}" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>`;
-    const frame = stage.querySelector("iframe");
-    // できるだけ はやく(ページの 中身が できた時点で)スタイルを たす。load でも 念のため。
-    const poll = setInterval(() => {
-      try {
-        const d = frame.contentDocument;
-        if (d && d.readyState !== "loading" && d.URL !== "about:blank") { fitInsideFrame(frame); clearInterval(poll); }
-      } catch (e) { clearInterval(poll); }
-    }, 50);
-    frame.addEventListener("load", () => { fitInsideFrame(frame); clearInterval(poll); });
+    fitFrame(stage.querySelector("iframe"));
     scrollToStage();
     tools.innerHTML = `
       <button class="btn yellow" id="btn-fs">⛶ ぜんがめん</button>
