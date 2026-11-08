@@ -266,17 +266,18 @@ window.KUMATA_GAMES = [
       "「SOLO」は CPU対戦(強さ 5段階)、「DUO」は オンラインで 2人対戦!",
     emoji: "🏒", color: "#ff5c5c",
     screenshots: [],
+    apk: APK_RELEASE + "BallHockey.apk",
     controls: {
       pc: [
         { key: "← →", action: "左右に 移動" },
-        { key: "ショット", action: "弾を 発射(画面のボタンを クリック)" },
+        { key: "スペース", action: "弾を 発射(画面の ショットボタンでも OK)" },
       ],
       touch: [
         { key: "左右ボタン", action: "左右に 移動" },
         { key: "ショット", action: "弾を 発射" },
       ],
     },
-    age: "小学生〜", players: "1人(CPU) / 2人オンライン", updated: "2026/10/31",
+    age: "小学生〜", players: "1人(CPU) / 2人オンライン", updated: "2026/11/08",
   },
   {
     id: "はさみん",
