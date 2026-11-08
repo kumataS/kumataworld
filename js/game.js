@@ -13,7 +13,7 @@
   }
 
   const cat = CATEGORIES[game.category] || CATEGORIES.play;
-  document.title = `${game.title} | kumataWorld!`;
+  applyGameSeo(game);
   $("#g-title").textContent = game.title;
   const badge = $("#g-badge");
   badge.className = `badge ${game.category}`;

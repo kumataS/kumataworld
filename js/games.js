@@ -14,6 +14,7 @@
    webgl    : (書かなくてOK)WebGL がまだ ないゲームは webgl: "" で「じゅんびちゅう」
    apk      : APK のダウンロードURL(APK_RELEASE + "ファイル名"。空ならボタンなし)
    controls : { pc: [{key, action}], touch: [{key, action}] }
+   seo      : 検索(Google)むけの { title: ページの題名, description: 説明文(120文字くらい)}
    age / players / updated : 情報欄
    ========================================================= */
 // Android の APK は GitHub Releases(タグ android)に おく。サイトの 容量(1GB)に 数えられないため。
@@ -26,6 +27,10 @@ window.KUMATA_GAMES = [
     id: "いちどういっとにふよんじゅうさんけん",
     title: "いちどういっと にふよんじゅうさんけん",
     icon: "いちどういっとにふよんじゅうさんけん_icon.jpg",
+    seo: {
+      title: "都道府県クイズ「いちどういっと にふよんじゅうさんけん」 無料の地理ゲーム",
+      description: "47都道府県の形を見て名前を当てる無料の都道府県クイズゲーム。特産品・観光地・山や川・県庁所在地のヒントつき。小学生の社会・地理の勉強や家庭学習に。PC・iPhoneのブラウザ、Androidアプリで遊べます。",
+    },
     category: "edu",
     tagline: "都道府県の かたちを見て 名前を当てよう!",
     description:
@@ -53,6 +58,10 @@ window.KUMATA_GAMES = [
     id: "AroundtheWorld!",
     title: "Around the World!",
     icon: "AroundtheWorld_icon.jpg",
+    seo: {
+      title: "国当てクイズ「Around the World!」 世界195か国の地理ゲーム",
+      description: "国の形を見て国名を当てる無料の世界地理クイズ。人口・面積・首都・世界遺産のヒント、195か国ぜんぶに挑む「195ALL」モード、オンラインランキングつき。地理の勉強や中学受験の対策にも。",
+    },
     category: "edu",
     tagline: "国の かたちを見て 195か国の 名前を当てよう!",
     description:
@@ -80,6 +89,10 @@ window.KUMATA_GAMES = [
     id: "PlusMinus",
     title: "PlusMinus",
     icon: "PlusMinus_icon.jpg",
+    seo: {
+      title: "計算パズル「PlusMinus」 10の倍数で消す算数ゲーム",
+      description: "+と−と数字のブロックで式をつくり、答えが10の倍数になると消える無料の落ちもの計算パズル。足し算・引き算の練習や頭の体操に。小学生から大人まで、ブラウザとAndroidで遊べます。",
+    },
     category: "edu",
     tagline: "式を つくって 10の倍数で 消す 計算パズル!",
     description:
@@ -108,6 +121,10 @@ window.KUMATA_GAMES = [
     id: "Wakuwaku",
     title: "わくわく",
     icon: "wakuwaku_icon.jpg",
+    seo: {
+      title: "図形パズル「わくわく」 形を枠につめこむ算数ゲーム",
+      description: "まる・三角・星など同じ面積の図形を回転させて、枠にいくつ入るか挑戦する無料の図形パズル。全13ステージと自由モード、オンラインランキングつき。図形感覚・空間認識のトレーニングに。",
+    },
     category: "edu",
     tagline: "図形を ぴったり 枠に つめこむ かたちパズル!",
     description:
@@ -136,6 +153,10 @@ window.KUMATA_GAMES = [
     id: "DiceCalculation",
     title: "Dice Calculation",
     icon: "DiceCaluculation_icon.jpg",
+    seo: {
+      title: "計算ゲーム「Dice Calculation」 サイコロで式をつくる算数パズル",
+      description: "サイコロを転がして出た目と+−で式をつくり、ターゲットの数を目指す無料の計算パズル。1本の式から5×10の盤まで3つのレベル。小学生の計算練習や大人の頭の体操に。ブラウザですぐ遊べます。",
+    },
     category: "edu",
     tagline: "サイコロで 式を つくって ターゲットの 数に しよう!",
     description:
@@ -165,6 +186,10 @@ window.KUMATA_GAMES = [
     id: "JumpSurvival",
     title: "JUMP SURVIVAL",
     icon: "JumpSurvival_icon.jpg",
+    seo: {
+      title: "「JUMP SURVIVAL」 板をしならせて跳ぶ無料アクションゲーム",
+      description: "板をしならせてジャンプし、トラから逃げて海に浮かぶ土台へ飛び移る物理アクションゲーム。すべる氷山や雲、風と雨などのギミックで全30面。PC・スマホのブラウザとAndroidで無料で遊べます。",
+    },
     category: "play",
     tagline: "板を しならせて 飛べ!トラから にげろ!",
     description:
@@ -191,6 +216,10 @@ window.KUMATA_GAMES = [
     id: "SkiBigAir",
     title: "SKI BIG AIR",
     icon: "SkiBigAir_Icon.jpg",
+    seo: {
+      title: "「SKI BIG AIR」 スキー・スノボのビッグエア 無料スポーツゲーム",
+      description: "ビッグキッカーで大ジャンプし、スピン・宙返り・グラブなどの空中技をきめる無料のスキー・スノーボードゲーム。技の難しさと着地で採点されるFREEと、お題に挑むCHALLENGEの2モード。ブラウザですぐ遊べます。",
+    },
     category: "play",
     tagline: "大ジャンプで 空中技を きめろ!",
     description:
@@ -224,6 +253,10 @@ window.KUMATA_GAMES = [
     id: "BallHockey",
     title: "BallHockey",
     icon: "BallHockey_icon.jpg",
+    seo: {
+      title: "「BallHockey」 ボールと弾でたたかう 無料の対戦ホッケーゲーム",
+      description: "ボールをはじき返してゴールを守り、弾も撃ちあう対戦ホッケーゲーム。CPU対戦(強さ5段階)と、オンラインの2人対戦。ブラウザで無料ですぐ遊べます。",
+    },
     category: "play",
     tagline: "ボールと 弾で たたかう 対戦ホッケー!",
     description:
@@ -248,6 +281,10 @@ window.KUMATA_GAMES = [
     id: "はさみん",
     title: "はさみん",
     icon: "hasaminIcon.png",
+    seo: {
+      title: "「はさみん」 駒をかこんで取りあう 無料のオンラインボードゲーム",
+      description: "相手の駒のまわりをふさいで取り、取った駒を打って使える無料のボードゲーム。AI対戦と、2人・3人のオンライン対戦。囲碁や将棋が好きな人にも。ブラウザとAndroidで遊べます。",
+    },
     category: "play",
     tagline: "駒を かこんで 取りあう ボードゲーム!",
     description:
@@ -275,6 +312,10 @@ window.KUMATA_GAMES = [
     id: "GoritaDaidasso",
     title: "ゴリタ大脱走",
     icon: "ゴリタ大脱走_icon.jpg",
+    seo: {
+      title: "「ゴリタ大脱走」 岩をおして迷路から脱出する 無料パズルゲーム",
+      description: "ゴリラのゴリタが岩をおして道をひらき、ゴールを目指す倉庫番風のパズルアクション。体力とバナナ、追いかけてくるスライムに注意。11×11から101×101マスの大迷路まで全10ステージ。ブラウザとAndroidで無料。",
+    },
     category: "play",
     tagline: "岩を おして 檻から 脱出!ゴリラの パズルアクション",
     description:
@@ -301,6 +342,10 @@ window.KUMATA_GAMES = [
     id: "GoritaDaidasso2",
     title: "ゴリタ大脱走2",
     icon: "ゴリタ大脱走2_icon.jpg",
+    seo: {
+      title: "「ゴリタ大脱走2」 色ブロックで迷路を作りかえる 無料パズルゲーム",
+      description: "ブロックを叩くと同じ色のブロックがいっせいに上下し、迷路の形が変わる頭脳派パズル。ターン制で動くスライムを落とし穴にはめながらゴールへ。全10ステージ。ブラウザとAndroidで無料で遊べます。",
+    },
     category: "play",
     tagline: "色のブロックを ぶっ叩いて 迷路を 作りかえろ!",
     description:
@@ -330,6 +375,10 @@ window.KUMATA_GAMES = [
     id: "CatsWayHome",
     title: "Cat's Way Home",
     icon: "CatsWayHome_icon.jpg",
+    seo: {
+      title: "「Cat's Way Home」 動くブロックをよけてねこを家へ 無料パズルゲーム",
+      description: "ねこが1マス動くたびに、命令どおりに色のブロックがいっせいに動く先読みパズル。ぶつからないように進んで、ねこをおうちへ帰そう。全10ステージ、手数ランキングつき。ブラウザとAndroidで無料。",
+    },
     category: "play",
     tagline: "動くブロックを よけて ねこを おうちへ!",
     description:
@@ -359,6 +408,10 @@ window.KUMATA_GAMES = [
     id: "Cat'sWayHome2",
     title: "Cat's Way Home 2",
     icon: "Cat'sWayHome2_icon.jpg",
+    seo: {
+      title: "「Cat's Way Home 2」 マスをスライドして道をつなぐ 無料パズルゲーム",
+      description: "ねこを歩かせるか、マスをスライドして道をつなぐかを1手ずつ選び、4すみのおうちを目指すパズル。近づいてくるスライムに注意。5×5から9×9まで。ブラウザとAndroidで無料で遊べます。",
+    },
     category: "play",
     tagline: "マスを 動かして 道を つなげ、ねこを おうちへ!",
     description:

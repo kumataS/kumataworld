@@ -105,6 +105,55 @@ function fitFrame(frame) {
   frame.addEventListener("load", () => { fitInsideFrame(frame); clearInterval(poll); });
 }
 
+// ---------- 検索(Google)むけ:ページの 題名・説明文 ----------
+const SITE_URL = "https://kumatas.github.io/kumataworld/";
+
+function setMeta(name, content) {
+  let m = document.querySelector(`meta[name="${name}"]`);
+  if (!m) { m = document.createElement("meta"); m.name = name; document.head.appendChild(m); }
+  m.content = content;
+}
+
+function setCanonical(url) {
+  let l = document.querySelector('link[rel="canonical"]');
+  if (!l) { l = document.createElement("link"); l.rel = "canonical"; document.head.appendChild(l); }
+  l.href = url;
+}
+
+// 詳細ページの 題名・説明文・正式な URL・ゲーム情報(構造化データ)を 入れる
+function applyGameSeo(game) {
+  const seo = game.seo || {};
+  const url = `${SITE_URL}game.html?id=${encodeURIComponent(game.id)}`;
+  const desc = seo.description || game.tagline || "";
+  document.title = `${seo.title || game.title} | kumataWorld!`;
+  setMeta("description", desc);
+  setCanonical(url);
+
+  const platforms = [webglUrl(game) && "Web browser", game.apk && "Android"].filter(Boolean);
+  const icon = iconCandidates(game)[0];
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: game.title,
+    description: desc,
+    url,
+    inLanguage: "ja",
+    genre: game.category === "edu" ? ["Educational", "Puzzle"] : ["Casual"],
+    gamePlatform: platforms,
+    applicationCategory: "Game",
+    operatingSystem: platforms.join(", "),
+    offers: { "@type": "Offer", price: "0", priceCurrency: "JPY" },
+    author: { "@type": "Person", name: "kumata" },
+    publisher: { "@type": "Organization", name: "kumataWorld!", url: SITE_URL },
+  };
+  if (icon) data.image = new URL(icon, SITE_URL).href;
+  if (game.updated) data.dateModified = game.updated.replace(/\//g, "-");
+  const s = document.createElement("script");
+  s.type = "application/ld+json";
+  s.textContent = JSON.stringify(data);
+  document.head.appendChild(s);
+}
+
 // URL の ?id=xxx の ゲームを さがす
 function gameFromUrl() {
   const id = new URLSearchParams(location.search).get("id");
