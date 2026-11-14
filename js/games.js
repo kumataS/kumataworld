@@ -492,6 +492,7 @@ window.KUMATA_GAMES = [
       "バナナを 使えば 前の 岩を こわせる!迷路は だんだん 大きくなって、最後は 101×101。全30ステージ!",
     emoji: "🦍", color: "#8d6e63",
     screenshots: [],
+    apk: APK_RELEASE + "GoritaDaidasso3.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ゴリタが 歩く(おしっぱなしで 歩きつづける)" },
