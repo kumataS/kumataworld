@@ -650,6 +650,7 @@ window.KUMATA_GAMES = [
       "線は 10本。青の マスを どれだけ ふやせるかな?同じ マス数なら タイムが はやい ほうが 上の ランキングに チャレンジ!",
     emoji: "🎨", color: "#ffd166",
     screenshots: [],
+    apk: APK_RELEASE + "ColorColor.apk",
     controls: {
       pc: [
         { key: "ドラッグ", action: "線の 向きを きめる(予想が 出る)→ はなして 線を 引く" },
