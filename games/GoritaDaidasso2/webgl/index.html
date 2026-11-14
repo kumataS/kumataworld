@@ -23,6 +23,7 @@
         <div id="unity-build-title">ゴリタ大脱走２</div>
       </div>
     </div>
+    <script src="../../../js/gz-fetch.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -55,9 +56,9 @@
       var loaderUrl = buildUrl + "/unityroom.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/unityroom.data",
+        dataUrl: buildUrl + "/unityroom.data.gz",
         frameworkUrl: buildUrl + "/unityroom.framework.js",
-        codeUrl: buildUrl + "/unityroom.wasm",
+        codeUrl: buildUrl + "/unityroom.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "ゴリタ大脱走２",

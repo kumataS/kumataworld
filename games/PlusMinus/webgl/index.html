@@ -23,6 +23,7 @@
         <div id="unity-build-title">PlusMinus</div>
       </div>
     </div>
+    <script src="../../../js/gz-fetch.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -55,9 +56,9 @@
       var loaderUrl = buildUrl + "/UnityRoomBuild.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/UnityRoomBuild.data",
+        dataUrl: buildUrl + "/UnityRoomBuild.data.gz",
         frameworkUrl: buildUrl + "/UnityRoomBuild.framework.js",
-        codeUrl: buildUrl + "/UnityRoomBuild.wasm",
+        codeUrl: buildUrl + "/UnityRoomBuild.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "kumata",
         productName: "PlusMinus",

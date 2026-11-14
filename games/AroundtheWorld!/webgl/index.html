@@ -23,6 +23,7 @@
         <div id="unity-build-title">CountryName195</div>
       </div>
     </div>
+    <script src="../../../js/gz-fetch.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -55,9 +56,9 @@
       var loaderUrl = buildUrl + "/Build_unityroom.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/Build_unityroom.data",
+        dataUrl: buildUrl + "/Build_unityroom.data.gz",
         frameworkUrl: buildUrl + "/Build_unityroom.framework.js",
-        codeUrl: buildUrl + "/Build_unityroom.wasm",
+        codeUrl: buildUrl + "/Build_unityroom.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "CountryName195",
