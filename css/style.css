@@ -510,3 +510,4 @@ details.apk-help ol { padding-left: 20px; margin: 8px 0 0; font-size: 0.9rem; }
 .dl-apk-alt { margin-top: 10px; text-align: center; }
 .dl-apk-alt summary { cursor: pointer; font-size: 0.9rem; color: var(--ink-soft); }
 .dl-apk-alt .dl-btn { margin-top: 10px; }
+.pf-gplay { background: #01875f; color: #fff; border-color: #01875f; }

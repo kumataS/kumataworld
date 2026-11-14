@@ -12,14 +12,16 @@
     const qid = encodeURIComponent(game.id);
     const pfs = [];
     if (webgl) pfs.push(`<a class="pf pf-link" href="play.html?id=${qid}" title="ブラウザで あそぶ">🌐 ブラウザ</a>`);
-    if (game.apk) pfs.push(`<a class="pf pf-link" href="download.html?id=${qid}" title="Android ばんを ダウンロード">🤖 Android</a>`);
+    // Google Play で 公開中なら「Google Play」、そうでなければ APK の「Android」
+    if (game.googlePlay) pfs.push(`<a class="pf pf-link pf-gplay" href="download.html?id=${qid}" title="Google Play で ダウンロード">▶ Google Play</a>`);
+    else if (game.apk) pfs.push(`<a class="pf pf-link" href="download.html?id=${qid}" title="Android ばんを ダウンロード">🤖 Android</a>`);
     // かんそうの 数(右はし)→ 詳細ページの かんそう欄へ
     const reviews = window.KumataReviews;
     if (reviews && reviews.enabled) pfs.push(`<a class="pf pf-link pf-review" href="${detail}#reviews" title="みんなの かんそう"><span aria-hidden="true">💬</span> <b data-review-count>-</b><span class="sr-only"> けんの かんそう</span></a>`);
 
     const stats = [];
     if (webgl) stats.push(`<span class="stat" data-stat="plays">▶ あそばれた <b>-</b> かい</span>`);
-    if (game.apk) stats.push(`<span class="stat" data-stat="downloads">⬇ ダウンロード <b>-</b> かい</span>`);
+    if (game.apk || game.googlePlay) stats.push(`<span class="stat" data-stat="downloads">⬇ ダウンロード <b>-</b> かい</span>`);
 
     return `
       <article class="card" data-game-id="${esc(game.id)}">
