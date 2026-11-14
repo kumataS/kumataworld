@@ -615,6 +615,7 @@ window.KUMATA_GAMES = [
       "キツネの いたずら、セイウチの 大波、シロクマの 重さ… でも アザラシは ピンチを 助けてくれる 味方だよ。迷子1〜10 の 全10ステージ!",
     emoji: "🐧", color: "#7ec8e3",
     screenshots: [],
+    apk: APK_RELEASE + "LittleLostPenguin.apk",
     controls: {
       pc: [
         { key: "マウスを うごかす", action: "ジャンプ先を ねらう(とどかない場所は 赤)" },
