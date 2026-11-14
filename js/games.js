@@ -14,6 +14,8 @@
    screenshots : スクリーンショット画像の配列
    webgl    : (書かなくてOK)WebGL がまだ ないゲームは webgl: "" で「じゅんびちゅう」
    apk      : APK のダウンロードURL(APK_RELEASE + "ファイル名"。空ならボタンなし)
+   googlePlay : Google Play で 公開中なら その ページの URL(GOOGLE_PLAY + "パッケージ名")。
+                書くと Android の ダウンロード画面で Google Play を いちばんに 案内する(APK は 下に のこる)
    controls : { pc: [{key, action}], touch: [{key, action}] }
    seo      : 検索(Google)むけの { title: ページの題名, description: 説明文(120文字くらい)}
    age / players / updated : 情報欄
@@ -21,6 +23,8 @@
 // Android の APK は GitHub Releases(タグ android)に おく。サイトの 容量(1GB)に 数えられないため。
 // https://github.com/kumataS/kumataworld/releases/tag/android
 const APK_RELEASE = "https://github.com/kumataS/kumataworld/releases/download/android/";
+// Google Play の アプリの ページ(うしろに パッケージ名を つける)
+const GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=";
 
 window.KUMATA_GAMES = [
   // ======================== まなぶ ゲーム ========================
@@ -41,6 +45,7 @@ window.KUMATA_GAMES = [
     emoji: "🗾", color: "#45b7ff",
     screenshots: [],
     apk: APK_RELEASE + "JapanesePrefecture250601.apk",
+    googlePlay: GOOGLE_PLAY + "com.kumata.japaneseprefectures3",
     controls: {
       pc: [
         { key: "クリック", action: "こたえを えらぶ / ヒントボールを ひらく" },

@@ -117,7 +117,9 @@
   const playBtn = webgl
     ?`<button class="btn play big" data-start>▶ ブラウザで あそぶ</button>`
     : `<button class="btn big" disabled>ブラウザばん じゅんびちゅう</button>`;
-  const apkBtn = game.apk
+  const apkBtn = game.googlePlay
+    ? `<a class="btn green big" href="${esc(game.googlePlay)}" target="_blank" rel="noopener">🤖 Google Play で ダウンロード</a>`
+    : game.apk
     ? `<a class="btn green big" href="${esc(game.apk)}" download>🤖 APK を ダウンロード</a>`
     : `<button class="btn big" disabled>Android ばん じゅんびちゅう</button>`;
 
@@ -126,10 +128,10 @@
   } else if (DEVICE.ios) {
     html += playBtn + `<p class="note">※ iPhone / iPad は ブラウザで あそべるよ。</p>`;
   } else {
-    html += playBtn + (game.apk ? apkBtn.replace(" big", "") : "");
+    html += playBtn + (game.apk || game.googlePlay ? apkBtn.replace(" big", "") : "");
   }
 
-  if (game.apk && !DEVICE.ios) {
+  if (game.apk && !game.googlePlay && !DEVICE.ios) {
     html += `
       <details class="apk-help" style="text-align:left;margin-top:6px">
         <summary>APK の インストール ほうほう</summary>
