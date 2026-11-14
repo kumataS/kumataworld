@@ -682,6 +682,7 @@ window.KUMATA_GAMES = [
       "消える 突起、くずれる 雪、反り返った 壁… 全10ステージ。ゴールの あとは 登りかたの リプレイも 見られるよ!",
     emoji: "🧗", color: "#e07a5f",
     screenshots: [],
+    apk: APK_RELEASE + "ClimbClimb.apk",
     controls: {
       pc: [
         { key: "クリック", action: "突起を えらぶ" },
