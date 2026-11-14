@@ -523,6 +523,7 @@ window.KUMATA_GAMES = [
       "手持ちの 扉 3まいと 入れかえることも できるよ(白か 赤か えらべる)。光る ゴールの とびらを めざせ!全10ステージ。",
     emoji: "🚪", color: "#c0392b",
     screenshots: [],
+    apk: APK_RELEASE + "GoritaDaidasso4.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ゴリタが 歩く" },
