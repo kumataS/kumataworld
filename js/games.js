@@ -261,6 +261,7 @@ window.KUMATA_GAMES = [
       "ことばが 読めたら 事件の 真相を 推理!大きな家・動物の村・森の研究所・古代遺跡の 全4話。",
     emoji: "🔍", color: "#b07cc6",
     screenshots: [],
+    apk: APK_RELEASE + "AngouMystery.apk",
     controls: {
       pc: [
         { key: "クリック", action: "歩く / 話しかける / 調べる / 会話を すすめる" },
