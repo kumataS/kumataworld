@@ -198,6 +198,7 @@ window.KUMATA_GAMES = [
       "すてた 水や のこった 水が 少ないほど 高得点。全30問、さいごは 超難関!わからないときは「答え合わせ」で 手順が 見られるよ。",
     emoji: "🥛", color: "#5bc0eb",
     screenshots: [],
+    apk: APK_RELEASE + "KumataMizuya.apk",
     controls: {
       pc: [
         { key: "クリック", action: "容器を えらぶ / ボタンを おす" },
