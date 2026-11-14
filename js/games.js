@@ -598,10 +598,10 @@ window.KUMATA_GAMES = [
   },
   {
     id: "迷子ペンギン",
-    title: "北極の迷子ペンギン",
+    title: "Little Lost Penguin",
     icon: "LittleLostPenguin_icon.jpg",
     seo: {
-      title: "「北極の迷子ペンギン」 流氷をジャンプして家に帰る無料アクションゲーム",
+      title: "「Little Lost Penguin」 流氷をジャンプして家に帰る迷子ペンギンの無料アクションゲーム",
       description: "迷子のペンギンを、流れる氷をジャンプで渡っておうちの氷山まで帰そう。重さで割れる氷、キツネやセイウチ、シロクマに注意。助けてくれるアザラシも。全10ステージ。PC・スマホのブラウザで無料で遊べます。",
     },
     category: "play",
