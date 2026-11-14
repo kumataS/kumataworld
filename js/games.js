@@ -230,6 +230,7 @@ window.KUMATA_GAMES = [
       "「日本語訳」ボタンで、解けた セリフに 日本語訳が 出るよ。全4話、さいごは 26文字 ぜんぶの 解読に チャレンジ!",
     emoji: "🏝️", color: "#3fb8af",
     screenshots: [],
+    apk: APK_RELEASE + "LostIsland.apk",
     controls: {
       pc: [
         { key: "クリック", action: "歩く / 話しかける / 調べる / 会話を すすめる" },
