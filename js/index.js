@@ -25,7 +25,7 @@
       <article class="card" data-game-id="${esc(game.id)}">
         <div class="thumb" style="${thumbStyle(game)}">
           ${thumbInner(game)}
-          <span class="badge ${game.category}">${cat.icon} ${cat.label}</span>
+          <span class="badges"><span class="badge ${game.category}">${cat.icon} ${cat.label}</span>${game.subject ? `<span class="badge ${game.category}">${esc(game.subject)}</span>` : ""}</span>
           ${isReady(game) ? "" : `<span class="badge soon">じゅんびちゅう</span>`}
         </div>
         <div class="card-body">

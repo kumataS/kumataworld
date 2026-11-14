@@ -18,6 +18,12 @@
   const badge = $("#g-badge");
   badge.className = `badge ${game.category}`;
   badge.textContent = `${cat.icon} ${cat.label}`;
+  if (game.subject) {
+    const sb = document.createElement("span");
+    sb.className = `badge ${game.category}`;
+    sb.textContent = game.subject;
+    badge.after(sb);
+  }
 
   // ---------- 説明 ----------
   $("#g-desc").innerHTML = (game.description || "せつめいは じゅんびちゅう…")
@@ -188,7 +194,7 @@
 
   // ---------- 情報 ----------
   const rows = [
-    ["カテゴリ", `${cat.icon} ${cat.label}`],
+    ["カテゴリ", `${cat.icon} ${cat.label}` + (game.subject ? `(${game.subject})` : "")],
     ["たいしょう", game.age || "だれでも"],
     ["プレイ人数", game.players || "1人"],
     ["あそべる たんまつ", [webgl && "ブラウザ(PC・iPhone)", game.apk && "Android"].filter(Boolean).join(" / ") || "じゅんびちゅう"],
