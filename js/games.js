@@ -284,7 +284,6 @@ window.KUMATA_GAMES = [
     age: "小学校中学年〜", players: "1人", updated: "2026/11/14",
   },
 
-  // ======================== あそぶ ゲーム ========================
   {
     id: "ElementWars",
     title: "Oくん 元素の海をいく!(体験版)",
@@ -293,7 +292,7 @@ window.KUMATA_GAMES = [
       title: "「Oくん 元素の海をいく!」 元素を集めて化学反応で戦う3Dアクション 体験版",
       description: "酸素のOくんが元素の世界を冒険する3Dアクションゲームの体験版。元素を集めて化学反応の弾で敵やボスと戦い、元素図鑑を完成させよう。水素・炭素・鉄の3ステージをブラウザで無料で遊べます。",
     },
-    category: "play",
+    category: "edu", subject: "化学",
     tagline: "元素を 集めて 化学反応で たたかえ!",
     description:
       "酸素の Oくんが 元素の世界を 冒険する 3Dアクション!\n" +
@@ -321,6 +320,7 @@ window.KUMATA_GAMES = [
     },
     age: "小学生〜", players: "1人", updated: "2026/11/15",
   },
+  // ======================== あそぶ ゲーム ========================
   {
     id: "JumpSurvival",
     title: "JUMP SURVIVAL",
