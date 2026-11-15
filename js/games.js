@@ -107,7 +107,7 @@ window.KUMATA_GAMES = [
       "大きな式で 消すほど 高得点!頭の体操にも 計算の練習にも ぴったり。",
     emoji: "➕", color: "#5fd068",
     screenshots: [],
-    apk: APK_RELEASE + "tasdas3D_android3.apk",
+    apk: APK_RELEASE + "PlusMinus.apk",
     controls: {
       pc: [
         { key: "← →", action: "ブロックを 左右に 動かす" },
