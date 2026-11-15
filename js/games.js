@@ -76,7 +76,7 @@ window.KUMATA_GAMES = [
       "ふつうモードは 195か国から 47問。「195ALL」モードなら 195か国 ぜんぶに チャレンジ!オンラインランキングも あるよ。",
     emoji: "🌏", color: "#2bc4b4",
     screenshots: [],
-    apk: APK_RELEASE + "AroundtheWorld261021-01.apk",
+    apk: APK_RELEASE + "AroundtheWorld.apk",
     controls: {
       pc: [
         { key: "クリック", action: "こたえを えらぶ / ヒントボールを ひらく" },
