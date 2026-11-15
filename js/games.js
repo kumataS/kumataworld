@@ -466,7 +466,7 @@ window.KUMATA_GAMES = [
       "追いかけてくる スライムは 岩で はさんで やっつけろ!11×11マスから 101×101マスの 大迷路まで、全10ステージ。",
     emoji: "🦍", color: "#8d6e63",
     screenshots: [],
-    apk: APK_RELEASE + "PushBlock261015-01.apk",
+    apk: APK_RELEASE + "GoritaDaidasso.apk",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "移動(岩に向かうと おす)" },
