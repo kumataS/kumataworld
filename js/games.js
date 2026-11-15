@@ -318,6 +318,7 @@ window.KUMATA_GAMES = [
         { key: "図鑑 / radar", action: "元素図鑑 / レーダー" },
       ],
     },
+    apk: APK_RELEASE + "ElementWars.apk",
     age: "小学生〜", players: "1人", updated: "2026/11/15",
   },
   // ======================== あそぶ ゲーム ========================
