@@ -286,6 +286,42 @@ window.KUMATA_GAMES = [
 
   // ======================== あそぶ ゲーム ========================
   {
+    id: "ElementWars",
+    title: "Oくん 元素の海をいく!(体験版)",
+    icon: "ElementWars_icon.jpg",
+    seo: {
+      title: "「Oくん 元素の海をいく!」 元素を集めて化学反応で戦う3Dアクション 体験版",
+      description: "酸素のOくんが元素の世界を冒険する3Dアクションゲームの体験版。元素を集めて化学反応の弾で敵やボスと戦い、元素図鑑を完成させよう。水素・炭素・鉄の3ステージをブラウザで無料で遊べます。",
+    },
+    category: "play",
+    tagline: "元素を 集めて 化学反応で たたかえ!",
+    description:
+      "酸素の Oくんが 元素の世界を 冒険する 3Dアクション!\n" +
+      "とちゅうで 集めた 元素を 組みあわせて 化学反応の 弾を うち、敵や ボスを たおそう。集めた 元素は 図鑑で 調べられるよ。\n" +
+      "この 体験版では 水素・炭素・鉄の 3ステージが 遊べるよ。(データが 大きいので、はじめの 読みこみに 時間が かかります)",
+    emoji: "🧪", color: "#4aa8ff",
+    screenshots: [],
+    controls: {
+      pc: [
+        { key: "↑ / ↓", action: "前へ / 後ろへ" },
+        { key: "← / →", action: "向きを かえる" },
+        { key: "E / Q", action: "上へ / 下へ" },
+        { key: "Shift", action: "ダッシュ" },
+        { key: "Space", action: "弾を うつ" },
+        { key: "Z / X", action: "弾を えらぶ" },
+        { key: "R", action: "レーダー" },
+        { key: "Tab / F", action: "元素図鑑" },
+      ],
+      touch: [
+        { key: "左の スティック", action: "移動" },
+        { key: "↑ / ↓ ボタン", action: "上へ / 下へ" },
+        { key: "元素ボタン", action: "弾を うつ" },
+        { key: "図鑑 / radar", action: "元素図鑑 / レーダー" },
+      ],
+    },
+    age: "小学生〜", players: "1人", updated: "2026/11/15",
+  },
+  {
     id: "JumpSurvival",
     title: "JUMP SURVIVAL",
     icon: "JumpSurvival_icon.jpg",
