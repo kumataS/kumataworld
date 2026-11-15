@@ -435,7 +435,7 @@ window.KUMATA_GAMES = [
       "ソロ(AI対戦)・デュオ(2人)・トリオ(3人)の オンライン対戦。「待った」の あり / なしも えらべるよ。",
     emoji: "♟️", color: "#9c7bff",
     screenshots: [],
-    apk: APK_RELEASE + "hasamin260505.apk",
+    apk: APK_RELEASE + "hasamin.apk",
     controls: {
       pc: [
         { key: "クリック", action: "自分の駒を えらぶ" },
