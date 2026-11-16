@@ -235,6 +235,7 @@ window.KUMATA_GAMES = [
       "生地は まん中が ふくらんだ 山の 形。見た目の 大きさだけでなく 高さも 考えて、マスに のせて「配分完了」! ずれが 少ないほど 高得点、全部 のせて 早く 終わると スピードボーナス。全30問。",
     emoji: "🍞", color: "#e8a24a",
     screenshots: [],
+    apk: APK_RELEASE + "KumataPan.apk",
     controls: {
       pc: [
         { key: "切る → 2点クリック", action: "その 2点を むすぶ 線で 生地を 切る" },
