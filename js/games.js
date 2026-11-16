@@ -369,6 +369,7 @@ window.KUMATA_GAMES = [
       "上下に 動く じゃま物や、くるくる 回る 円盤も… 全5ステージに チャレンジしよう。",
     emoji: "🔴", color: "#e53935",
     screenshots: [],
+    apk: APK_RELEASE + "BallDown.apk",
     controls: {
       pc: [
         { key: "クリック(長押し)", action: "おしている 間、その 方向へ かたむく。円盤の 中心から 遠いほど 強く かたむく" },
