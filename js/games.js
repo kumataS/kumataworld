@@ -14,6 +14,7 @@
    screenshots : スクリーンショット画像の配列
    webgl    : (書かなくてOK)WebGL がまだ ないゲームは webgl: "" で「じゅんびちゅう」
    apk      : APK のダウンロードURL(APK_RELEASE + "ファイル名"。空ならボタンなし)
+   youtube  : YouTube ショート動画の URL(書くと 一覧の Android ボタンの 右に「どうが」ボタンが 出る)
    googlePlay : Google Play で 公開中なら その ページの URL(GOOGLE_PLAY + "パッケージ名")。
                 書くと Android の ダウンロード画面で Google Play を いちばんに 案内する(APK は 下に のこる)
    controls : { pc: [{key, action}], touch: [{key, action}] }
@@ -45,6 +46,7 @@ window.KUMATA_GAMES = [
     emoji: "🗾", color: "#45b7ff",
     screenshots: [],
     apk: APK_RELEASE + "JapanesePrefecture250601.apk",
+    youtube: "",
     googlePlay: GOOGLE_PLAY + "com.kumata.japaneseprefectures3",
     controls: {
       pc: [
@@ -77,6 +79,7 @@ window.KUMATA_GAMES = [
     emoji: "🌏", color: "#2bc4b4",
     screenshots: [],
     apk: APK_RELEASE + "AroundtheWorld.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "こたえを えらぶ / ヒントボールを ひらく" },
@@ -108,6 +111,7 @@ window.KUMATA_GAMES = [
     emoji: "➕", color: "#5fd068",
     screenshots: [],
     apk: APK_RELEASE + "PlusMinus.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "← →", action: "ブロックを 左右に 動かす" },
@@ -140,6 +144,7 @@ window.KUMATA_GAMES = [
     emoji: "🔷", color: "#a77bff",
     screenshots: [],
     apk: APK_RELEASE + "Wakuwaku.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "ドラッグ", action: "図形を 枠に 入れる・動かす" },
@@ -172,6 +177,7 @@ window.KUMATA_GAMES = [
     emoji: "🎲", color: "#7b8cff",
     screenshots: [],
     apk: APK_RELEASE + "DiceCalculation.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "ドラッグ", action: "サイコロを 上下左右に ころがして 目を かえる" },
@@ -204,6 +210,7 @@ window.KUMATA_GAMES = [
     emoji: "🥛", color: "#5bc0eb",
     screenshots: [],
     apk: APK_RELEASE + "KumataMizuya.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "容器を えらぶ / ボタンを おす" },
@@ -236,6 +243,7 @@ window.KUMATA_GAMES = [
     emoji: "🍞", color: "#e8a24a",
     screenshots: [],
     apk: APK_RELEASE + "KumataPan.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "切る → 2点クリック", action: "その 2点を むすぶ 線で 生地を 切る" },
@@ -267,6 +275,7 @@ window.KUMATA_GAMES = [
     emoji: "🏝️", color: "#3fb8af",
     screenshots: [],
     apk: APK_RELEASE + "LostIsland.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "歩く / 話しかける / 調べる / 会話を すすめる" },
@@ -299,6 +308,7 @@ window.KUMATA_GAMES = [
     emoji: "🔍", color: "#b07cc6",
     screenshots: [],
     apk: APK_RELEASE + "AngouMystery.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "歩く / 話しかける / 調べる / 会話を すすめる" },
@@ -350,6 +360,7 @@ window.KUMATA_GAMES = [
       ],
     },
     apk: APK_RELEASE + "ElementWars.apk",
+    youtube: "",
     age: "小学生〜", players: "1人", updated: "2026/11/15",
   },
   // ======================== あそぶ ゲーム ========================
@@ -370,6 +381,7 @@ window.KUMATA_GAMES = [
     emoji: "🔴", color: "#e53935",
     screenshots: [],
     apk: APK_RELEASE + "BallDown.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック(長押し)", action: "おしている 間、その 方向へ かたむく。円盤の 中心から 遠いほど 強く かたむく" },
@@ -408,6 +420,7 @@ window.KUMATA_GAMES = [
       ],
     },
     apk: "games/JumpSurvival/JumpSurvival.apk",
+    youtube: "",
     age: "小学生〜", players: "1人", updated: "2026/11/07",
   },
   {
@@ -446,6 +459,7 @@ window.KUMATA_GAMES = [
       ],
     },
     apk: APK_RELEASE + "SkiBigAir.apk",
+    youtube: "",
     age: "小学生〜", players: "1人", updated: "2026/11/08",
   },
   {
@@ -465,6 +479,7 @@ window.KUMATA_GAMES = [
     emoji: "🏒", color: "#ff5c5c",
     screenshots: [],
     apk: APK_RELEASE + "BallHockey.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "← →", action: "左右に 移動" },
@@ -494,6 +509,7 @@ window.KUMATA_GAMES = [
     emoji: "♟️", color: "#9c7bff",
     screenshots: [],
     apk: APK_RELEASE + "hasamin.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "自分の駒を えらぶ" },
@@ -525,6 +541,7 @@ window.KUMATA_GAMES = [
     emoji: "🦍", color: "#8d6e63",
     screenshots: [],
     apk: APK_RELEASE + "GoritaDaidasso.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "移動(岩に向かうと おす)" },
@@ -555,6 +572,7 @@ window.KUMATA_GAMES = [
     emoji: "🦍", color: "#ffd23f",
     screenshots: [],
     apk: APK_RELEASE + "GoritaDaidasso2.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "移動" },
@@ -588,6 +606,7 @@ window.KUMATA_GAMES = [
     emoji: "🦍", color: "#8d6e63",
     screenshots: [],
     apk: APK_RELEASE + "GoritaDaidasso3.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ゴリタが 歩く(おしっぱなしで 歩きつづける)" },
@@ -619,6 +638,7 @@ window.KUMATA_GAMES = [
     emoji: "🚪", color: "#c0392b",
     screenshots: [],
     apk: APK_RELEASE + "GoritaDaidasso4.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ゴリタが 歩く" },
@@ -653,6 +673,7 @@ window.KUMATA_GAMES = [
     emoji: "🐱", color: "#ff6b9d",
     screenshots: [],
     apk: APK_RELEASE + "CatsWayHome.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印キー", action: "ねこが 1マス 移動" },
@@ -686,6 +707,7 @@ window.KUMATA_GAMES = [
     emoji: "🏠", color: "#ffb347",
     screenshots: [],
     apk: APK_RELEASE + "CatsWayHome2.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "矢印 / WASD", action: "ねこが 歩く" },
@@ -718,6 +740,7 @@ window.KUMATA_GAMES = [
     emoji: "🐧", color: "#7ec8e3",
     screenshots: [],
     apk: APK_RELEASE + "LittleLostPenguin.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "マウスを うごかす", action: "ジャンプ先を ねらう(とどかない場所は 赤)" },
@@ -748,6 +771,7 @@ window.KUMATA_GAMES = [
     emoji: "🎨", color: "#ffd166",
     screenshots: [],
     apk: APK_RELEASE + "ColorColor.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "ドラッグ", action: "線の 向きを きめる(予想が 出る)→ はなして 線を 引く" },
@@ -779,6 +803,7 @@ window.KUMATA_GAMES = [
     emoji: "🧗", color: "#e07a5f",
     screenshots: [],
     apk: APK_RELEASE + "ClimbClimb.apk",
+    youtube: "",
     controls: {
       pc: [
         { key: "クリック", action: "突起を えらぶ" },
