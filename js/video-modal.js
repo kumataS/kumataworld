@@ -30,7 +30,22 @@
   }
 
   // ---- 画面 ----
-  let modal, box, player, lastFocus, scrollY = 0;
+  let modal, box, player, lastFocus, scrollY = 0, watch = null;
+
+  // ショート動画は 埋め込むと「おわり」の 合図を 出さずに くり返し 再生する ことがある。
+  // 再生時間を 見はって、さいごまで 行ったら(または 先頭に もどったら)とじる
+  function startWatch() {
+    stopWatch();
+    let last = 0, maxT = 0;
+    watch = setInterval(() => {
+      if (!player || !player.getCurrentTime) return;
+      const t = player.getCurrentTime() || 0, d = player.getDuration() || 0;
+      if (d > 0 && (t >= d - 0.25 || (maxT > d - 1.5 && t < last - 1))) { close(); return; }
+      if (t > maxT) maxT = t;
+      last = t;
+    }, 200);
+  }
+  function stopWatch() { if (watch) { clearInterval(watch); watch = null; } }
 
   function build() {
     modal = document.createElement("div");
@@ -72,7 +87,7 @@
         height: "100%",
         playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1, fs: 0 },
         events: {
-          onReady: e => { try { e.target.playVideo(); } catch (_) {} },
+          onReady: e => { try { e.target.playVideo(); } catch (_) {} startWatch(); },
           // 見おわったら とじる(つぎの 動画は 流さない)
           onStateChange: e => { if (e.data === YT.PlayerState.ENDED) close(); },
           // 埋め込みが 許可されていない 動画など
@@ -83,6 +98,7 @@
   }
 
   function showFallback(url) {
+    stopWatch();
     if (player && player.destroy) { try { player.destroy(); } catch (_) {} }
     player = null;
     box.innerHTML = `
@@ -95,6 +111,7 @@
   }
 
   function close() {
+    stopWatch();
     if (!modal || !modal.classList.contains("open")) return;
     if (player && player.destroy) { try { player.destroy(); } catch (_) {} }
     player = null;
