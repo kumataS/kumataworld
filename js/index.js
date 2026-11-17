@@ -16,7 +16,7 @@
     if (game.googlePlay) pfs.push(`<a class="pf pf-link pf-gplay" href="download.html?id=${qid}" title="Google Play で ダウンロード">▶ Google Play</a>`);
     else if (game.apk) pfs.push(`<a class="pf pf-link" href="download.html?id=${qid}" title="Android ばんを ダウンロード">🤖 Android</a>`);
     // YouTube ショート動画(Android ボタンの 右)
-    if (game.youtube) pfs.push(`<a class="pf pf-link pf-yt" href="${esc(game.youtube)}" target="_blank" rel="noopener" title="YouTube で どうがを 見る">🎬 どうが</a>`);
+    if (game.youtube) pfs.push(`<a class="pf pf-link pf-yt" href="${esc(game.youtube)}" target="_blank" rel="noopener" data-yt title="どうがを 見る(見おわったら もどるよ)">🎬 どうが</a>`);
     // かんそうの 数(右はし)→ 詳細ページの かんそう欄へ
     const reviews = window.KumataReviews;
     if (reviews && reviews.enabled) pfs.push(`<a class="pf pf-link pf-review" href="${detail}#reviews" title="みんなの かんそう"><span aria-hidden="true">💬</span> <b data-review-count>-</b><span class="sr-only"> けんの かんそう</span></a>`);

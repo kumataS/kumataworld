@@ -512,3 +512,20 @@ details.apk-help ol { padding-left: 20px; margin: 8px 0 0; font-size: 0.9rem; }
 .dl-apk-alt .dl-btn { margin-top: 10px; }
 .pf-gplay { background: #01875f; color: #fff; border-color: #01875f; }
 .pf-yt { background: #ff0033; color: #fff; border-color: #ff0033; }
+
+/* YouTube どうが(ページの 上で 再生 → 見おわったら とじる)*/
+.yt-modal { position: fixed; inset: 0; z-index: 1000; display: none; place-items: center;
+  background: rgba(40, 24, 10, .78); padding: 16px; }
+.yt-modal.open { display: grid; }
+.yt-modal-box { position: relative; height: min(86vh, 900px); aspect-ratio: 9 / 16; max-width: 100%; }
+@supports (height: 100dvh) { .yt-modal-box { height: min(86dvh, 900px); } }
+.yt-modal-frame { width: 100%; height: 100%; border-radius: 18px; overflow: hidden; background: #000;
+  border: 4px solid var(--ink); box-shadow: 0 10px 0 rgba(0,0,0,.35); }
+.yt-modal-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.yt-modal-close { position: absolute; top: -14px; right: -14px; z-index: 2; width: 44px; height: 44px;
+  border-radius: 50%; border: 3px solid var(--ink); background: var(--yellow); color: var(--ink);
+  font-size: 1.6rem; font-weight: 800; line-height: 1; cursor: pointer; box-shadow: 0 3px 0 rgba(0,0,0,.3); }
+.yt-modal-fallback { height: 100%; display: grid; place-content: center; gap: 12px; padding: 20px;
+  text-align: center; color: #fff; background: #2b1a0d; font-weight: 700; }
+.yt-modal-note { font-size: .85rem; opacity: .8; margin: 0; }
+html.yt-modal-lock, html.yt-modal-lock body { overflow: hidden; }
