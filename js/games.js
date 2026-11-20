@@ -360,7 +360,7 @@ window.KUMATA_GAMES = [
       ],
     },
     apk: APK_RELEASE + "ElementWars.apk",
-    youtube: "",
+    youtube: "https://youtube.com/shorts/KcxiohZtlGA",
     age: "小学生〜", players: "1人", updated: "2026/11/15",
   },
   // ======================== あそぶ ゲーム ========================
