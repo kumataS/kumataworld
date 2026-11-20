@@ -479,6 +479,7 @@ window.KUMATA_GAMES = [
     emoji: "🏒", color: "#ff5c5c",
     screenshots: [],
     apk: APK_RELEASE + "BallHockey.apk",
+    googlePlay: GOOGLE_PLAY + "com.kumata.ballhockey2",
     youtube: "https://youtube.com/shorts/CrxS8t9G-2U",
     controls: {
       pc: [
@@ -509,6 +510,7 @@ window.KUMATA_GAMES = [
     emoji: "♟️", color: "#9c7bff",
     screenshots: [],
     apk: APK_RELEASE + "hasamin.apk",
+    googlePlay: GOOGLE_PLAY + "com.kumata.hasamin",
     youtube: "https://youtube.com/shorts/RaU-YiXW5iQ",
     controls: {
       pc: [
