@@ -381,7 +381,7 @@ window.KUMATA_GAMES = [
     emoji: "🔴", color: "#e53935",
     screenshots: [],
     apk: APK_RELEASE + "BallDown.apk",
-    youtube: "",
+    youtube: "https://youtube.com/shorts/nF_6JgFXe6U",
     controls: {
       pc: [
         { key: "クリック(長押し)", action: "おしている 間、その 方向へ かたむく。円盤の 中心から 遠いほど 強く かたむく" },
@@ -840,6 +840,7 @@ window.KUMATA_GAMES = [
       "落ち葉の モコモコは もぐった リス! 巣に どんぐりが たまると ゲームオーバー。全5ステージ。",
     emoji: "🌰", color: "#b5733a",
     screenshots: [],
+    youtube: "https://youtube.com/shorts/FkTmX9sAdtg",
     controls: {
       pc: [
         { key: "WASD / 矢印キー / ドラッグ", action: "クマタを うごかす" },
@@ -868,6 +869,7 @@ window.KUMATA_GAMES = [
       "玉は 箱の 前の 絵と 同じ 箱へ! 少ない ポイントで クリアするほど ★が ふえる。全25ステージ。",
     emoji: "⚙️", color: "#e5533d",
     screenshots: [],
+    youtube: "https://youtube.com/shorts/CwalSCZu4Mg",
     controls: {
       pc: [
         { key: "ドラッグ", action: "歯車を 穴に 置く / 置いた 歯車を 動かす" },
@@ -897,6 +899,7 @@ window.KUMATA_GAMES = [
       "敵艦が 潜水艦の 列まで 来たら ゲームオーバー! 15×15(ふつう)と 21×21(むずかしい)、各10面。さいごは リプレイで 敵の 動きが 見られるよ。",
     emoji: "🚢", color: "#2a6fb8",
     screenshots: [],
+    youtube: "https://youtube.com/shorts/xhCfV9N3XAU",
     controls: {
       pc: [
         { key: "クリック", action: "魚雷を 撃つ マスを えらぶ" },
