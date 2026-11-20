@@ -840,6 +840,7 @@ window.KUMATA_GAMES = [
       "落ち葉の モコモコは もぐった リス! 巣に どんぐりが たまると ゲームオーバー。全5ステージ。",
     emoji: "🌰", color: "#b5733a",
     screenshots: [],
+    apk: APK_RELEASE + "DonguriSoudatsu.apk",
     youtube: "https://youtube.com/shorts/FkTmX9sAdtg",
     controls: {
       pc: [
@@ -869,6 +870,7 @@ window.KUMATA_GAMES = [
       "玉は 箱の 前の 絵と 同じ 箱へ! 少ない ポイントで クリアするほど ★が ふえる。全25ステージ。",
     emoji: "⚙️", color: "#e5533d",
     screenshots: [],
+    apk: APK_RELEASE + "GearBall.apk",
     youtube: "https://youtube.com/shorts/CwalSCZu4Mg",
     controls: {
       pc: [
@@ -899,6 +901,7 @@ window.KUMATA_GAMES = [
       "敵艦が 潜水艦の 列まで 来たら ゲームオーバー! 15×15(ふつう)と 21×21(むずかしい)、各10面。さいごは リプレイで 敵の 動きが 見られるよ。",
     emoji: "🚢", color: "#2a6fb8",
     screenshots: [],
+    apk: APK_RELEASE + "Sensuikan.apk",
     youtube: "https://youtube.com/shorts/xhCfV9N3XAU",
     controls: {
       pc: [
