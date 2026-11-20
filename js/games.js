@@ -882,7 +882,7 @@ window.KUMATA_GAMES = [
   {
     id: "Sensuikan",
     title: "潜水艦 vs 大艦隊",
-    icon: "Sensuikan_icon.png",
+    icon: "Sensuikan_icon2.png",
     seo: {
       title: "推理ゲーム「潜水艦 vs 大艦隊」 見えない敵艦隊を魚雷で撃沈する無料ゲーム",
       description: "見えない敵艦隊の位置を推理して、潜水艦から魚雷を撃ちこむ作戦ゲーム。敵は毎ターン動き、フェイントもしかけてくる！命中の青いマスから向きと動きを読もう。15×15と21×21、各10面。PC・スマホのブラウザで無料で遊べます。",
