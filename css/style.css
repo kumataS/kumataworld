@@ -529,3 +529,6 @@ details.apk-help ol { padding-left: 20px; margin: 8px 0 0; font-size: 0.9rem; }
   text-align: center; color: #fff; background: #2b1a0d; font-weight: 700; }
 .yt-modal-note { font-size: .85rem; opacity: .8; margin: 0; }
 html.yt-modal-lock, html.yt-modal-lock body { overflow: hidden; }
+
+/* どうがボタン(詳細・ダウンロード画面) */
+.btn.yt { background: #ff0033; color: #fff; }

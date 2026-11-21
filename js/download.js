@@ -54,6 +54,7 @@
 
     <p class="dl-links">
       ${webglUrl(game) ? `<a class="btn play" href="play.html?id=${encodeURIComponent(game.id)}">🌐 ブラウザで あそぶ</a>` : ""}
+      ${game.youtube ? `<a class="btn yt" href="${esc(game.youtube)}" target="_blank" rel="noopener" data-yt>🎬 どうが</a>` : ""}
       <a class="btn" href="${detail}">📝 ゲームの せつめい</a>
     </p>`;
 

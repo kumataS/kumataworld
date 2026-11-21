@@ -131,6 +131,9 @@
     html += playBtn + (game.apk || game.googlePlay ? apkBtn.replace(" big", "") : "");
   }
 
+  // YouTube ショート動画(どの たんまつでも 出す)
+  if (game.youtube) html += `<a class="btn yt" href="${esc(game.youtube)}" target="_blank" rel="noopener" data-yt>🎬 どうがを 見る</a>`;
+
   if (game.apk && !game.googlePlay && !DEVICE.ios) {
     html += `
       <details class="apk-help" style="text-align:left;margin-top:6px">
