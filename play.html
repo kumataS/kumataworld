@@ -2,6 +2,25 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <script>
+  // 古い ページが スマホに のこっていたら、新しい ページを 読みなおす(version.txt と games.js の 番号を くらべる)
+  (function () {
+    try {
+      fetch("version.txt?t=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
+        var v = parseInt(t, 10);
+        var sc = document.querySelector('script[src*="games.js"]');
+        var pageV = sc ? parseInt(sc.getAttribute("src").split("v=")[1], 10) : 0;
+        if (!(v > pageV) || !pageV) return;
+        var key = "kw_reload_" + v;
+        if (sessionStorage.getItem(key)) return;   // 1回だけ
+        sessionStorage.setItem(key, "1");
+        var u = new URL(location.href);
+        u.searchParams.set("_r", v);
+        location.replace(u.toString());
+      }).catch(function () {});
+    } catch (e) {}
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kumataWorld!</title>
   <meta name="robots" content="noindex, follow">
@@ -9,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=44">
+  <link rel="stylesheet" href="css/style.css?v=45">
 </head>
 <body class="play-page">
 
@@ -25,10 +44,10 @@
 
   <main class="play-stage" id="p-stage"></main>
 
-  <script src="js/games.js?v=44"></script>
-  <script src="js/common.js?v=44"></script>
-  <script src="js/counter-config.js?v=44"></script>
-  <script src="js/counter.js?v=44"></script>
-  <script src="js/play.js?v=44"></script>
+  <script src="js/games.js?v=45"></script>
+  <script src="js/common.js?v=45"></script>
+  <script src="js/counter-config.js?v=45"></script>
+  <script src="js/counter.js?v=45"></script>
+  <script src="js/play.js?v=45"></script>
 </body>
 </html>
