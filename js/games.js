@@ -965,6 +965,7 @@ window.KUMATA_GAMES = [
       "カメラを まわして 上から 横から 考えよう。少ない ブロックで クリアすると ★3つ。初級〜超上級 全60ステージ。",
     emoji: "🧱", color: "#3d8be5",
     screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
+    apk: APK_RELEASE + "GearGear3D.apk",
     youtube: "https://youtube.com/shorts/iXDpQw2ehDY",
     controls: {
       pc: [
