@@ -983,4 +983,36 @@ window.KUMATA_GAMES = [
     },
     age: "小学校中学年〜", players: "1人", updated: "2026/11/23",
   },
+  {
+    id: "KumataPenki",
+    title: "クマタのペンキ屋さん",
+    icon: "KumataPenki_icon.png",
+    seo: {
+      title: "色づくりゲーム「クマタのペンキ屋さん」 R・G・Bでお題の色を作る無料ゲーム",
+      description: "2秒だけ見えるお題の色をおぼえて、R（赤）・G（緑）・B（青）のバーで同じ色を作るゲーム。ぴったりなら100点！光の三原色のしくみが遊びながらわかります。PC・スマホのブラウザで無料で遊べます。",
+    },
+    category: "edu", subject: "図工",
+    tagline: "お題の 色を おぼえて、R・G・B で 作ろう!",
+    description:
+      "ペンキ屋さんの クマタと いっしょに 色づくりに チャレンジ! お題の 色が 見えるのは たったの 2秒。\n" +
+      "しっかり おぼえたら R(赤)→G(緑)→B(青)の じゅんに バーを うごかして、同じ 色を 作ろう。バーを うごかすと クマタが ペンキで ぬってくれるよ。\n" +
+      "ぴったりなら 100点! 光の 三原色の しくみが、遊びながら わかります。",
+    emoji: "🎨", color: "#e84a6a",
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg", "ss6.jpg"],
+    apk: APK_RELEASE + "KumataPenki.apk",
+    youtube: "https://youtube.com/shorts/eLw7TqeQ_fw",
+    controls: {
+      pc: [
+        { key: "スタート", action: "お題の 色が 2秒 出るので おぼえる" },
+        { key: "R・G・B の バーを ドラッグ", action: "色を かえる(白から スタート)" },
+        { key: "決定", action: "その色を きめて 次へ(R → G → B)" },
+        { key: "もう一度", action: "次の お題へ" },
+      ],
+      touch: [
+        { key: "バーを ドラッグ", action: "色を かえる" },
+        { key: "決定を タップ", action: "次の 色へ" },
+      ],
+    },
+    age: "小学生〜", players: "1人", updated: "2026/11/23",
+  },
 ];
