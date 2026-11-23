@@ -156,7 +156,8 @@
   }));
 
   // ---------- スクリーンショット ----------
-  const shots = game.screenshots || [];
+  // ファイル名だけなら games/<id>/ の中、"/" を ふくむ ときは そのまま
+  const shots = (game.screenshots || []).map(s => s.includes("/") ? s : `${gameDir(game)}/${encodeURIComponent(s)}`);
   const main = $("#shots-main");
   const thumbs = $("#shots-thumbs");
   if (shots.length) {

@@ -11,7 +11,7 @@
    description : 詳細ページの説明(\n で改行)
    icon     : そのフォルダに 入れた アイコンの ファイル名(512×512)。"" なら アイコンなし
    thumb    : (書かなくてOK)アイコン以外の画像を つかいたいときだけ
-   screenshots : スクリーンショット画像の配列
+   screenshots : スクリーンショット画像の配列(ファイル名だけなら そのゲームの フォルダの中)
    webgl    : (書かなくてOK)WebGL がまだ ないゲームは webgl: "" で「じゅんびちゅう」
    apk      : APK のダウンロードURL(APK_RELEASE + "ファイル名"。空ならボタンなし)
    youtube  : YouTube ショート動画の URL(書くと 一覧の Android ボタンの 右に「どうが」ボタンが 出る)
@@ -44,7 +44,7 @@ window.KUMATA_GAMES = [
       "じかんが たつと ヒントボールが出てきて、特産品・観光地・山や川・となりの県・県庁所在地などが 見られるよ。\n" +
       "正解は +100点、まちがいは -10点。1問の 制限時間は 1〜99秒で かえられるよ。目指せ 47問 ぜんぶ正解!",
     emoji: "🗾", color: "#45b7ff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "JapanesePrefecture250601.apk",
     youtube: "https://youtube.com/shorts/KtZ7R1oDiDI",
     googlePlay: GOOGLE_PLAY + "com.kumata.japaneseprefectures3",
@@ -77,7 +77,7 @@ window.KUMATA_GAMES = [
       "ヒントボールは 3だんかい。人口・面積・GDP → 山・川・湖・世界遺産 → 首都 の じゅんに 出てくるよ。\n" +
       "ふつうモードは 195か国から 47問。「195ALL」モードなら 195か国 ぜんぶに チャレンジ!オンラインランキングも あるよ。",
     emoji: "🌏", color: "#2bc4b4",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "AroundtheWorld.apk",
     youtube: "https://youtube.com/shorts/AwxoGamoApU",
     controls: {
@@ -109,7 +109,7 @@ window.KUMATA_GAMES = [
       "数字が ならぶと「5 4 → 54」のように 大きな数に、「− −」と つづけば「+」に 早変わり。\n" +
       "大きな式で 消すほど 高得点!頭の体操にも 計算の練習にも ぴったり。",
     emoji: "➕", color: "#5fd068",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "PlusMinus.apk",
     youtube: "https://youtube.com/shorts/-fAFOR2QXJE",
     controls: {
@@ -142,7 +142,7 @@ window.KUMATA_GAMES = [
       "図形は 回転できるけど、ほかの図形や 枠には かさねられないよ。枠と 同じ種類の 図形は つかえないのが ポイント。\n" +
       "全13ステージの「ステージモード」と、枠や制限時間を 自分で えらべる「自由モード」。オンラインランキングも あるよ!",
     emoji: "🔷", color: "#a77bff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "Wakuwaku.apk",
     youtube: "https://youtube.com/shorts/u-W6kRReyog",
     controls: {
@@ -175,7 +175,7 @@ window.KUMATA_GAMES = [
       "となりに ならんだ 目は「1 と 3 → 13」のように 大きな数に なるよ。式の こたえ(Result)を ターゲット(Target)の 数に できたら クリア!\n" +
       "LEVEL 1 は 1本の 式、LEVEL 2 は 5×5 の たて・よこ 10本、LEVEL 3 は 5×10 の 15本に チャレンジ。",
     emoji: "🎲", color: "#7b8cff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "DiceCalculation.apk",
     youtube: "https://youtube.com/shorts/yZCIWtwvDo0",
     controls: {
@@ -208,7 +208,7 @@ window.KUMATA_GAMES = [
       "容器を 水で いっぱいにして、べつの 容器に うつして、あまりを すてて… 頭を ひねって ピッタリの 量に しよう。\n" +
       "すてた 水や のこった 水が 少ないほど 高得点。全30問、さいごは 超難関!わからないときは「答え合わせ」で 手順が 見られるよ。",
     emoji: "🥛", color: "#5bc0eb",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "KumataMizuya.apk",
     youtube: "https://youtube.com/shorts/FN5PhJZKEsM",
     controls: {
@@ -241,7 +241,7 @@ window.KUMATA_GAMES = [
       "生地の まわりの 2点を タップすると まっすぐ 線が 引かれて、クマタが 大きな 包丁で 切ってくれる。でも クマタの 切り方は ちょっと てきとう…\n" +
       "生地は まん中が ふくらんだ 山の 形。見た目の 大きさだけでなく 高さも 考えて、マスに のせて「配分完了」! ずれが 少ないほど 高得点、全部 のせて 早く 終わると スピードボーナス。全30問。",
     emoji: "🍞", color: "#e8a24a",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "KumataPan.apk",
     youtube: "https://youtube.com/shorts/ZdHpaJXm9L8",
     controls: {
@@ -273,7 +273,7 @@ window.KUMATA_GAMES = [
       "クマタに なって 住人と 話し、島を 調べ、A〜Z の 文字を 入れかえて 暗号を 解読しよう。\n" +
       "「日本語訳」ボタンで、解けた セリフに 日本語訳が 出るよ。全4話、さいごは 26文字 ぜんぶの 解読に チャレンジ!",
     emoji: "🏝️", color: "#3fb8af",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "LostIsland.apk",
     youtube: "https://youtube.com/shorts/EsX2FX4rPKM",
     controls: {
@@ -306,7 +306,7 @@ window.KUMATA_GAMES = [
       "クマタに なって 動物たちと 話し、部屋の 物を 調べ、五十音パネルで 文字を 入れかえて 解読しよう。正しく 解けた 文字は 赤く なるよ。\n" +
       "ことばが 読めたら 事件の 真相を 推理!大きな家・動物の村・森の研究所・古代遺跡の 全4話。",
     emoji: "🔍", color: "#b07cc6",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "AngouMystery.apk",
     youtube: "https://youtube.com/shorts/uOcSFY0eLh4",
     controls: {
@@ -340,7 +340,7 @@ window.KUMATA_GAMES = [
       "とちゅうで 集めた 元素を 組みあわせて 化学反応の 弾を うち、敵や ボスを たおそう。集めた 元素は 図鑑で 調べられるよ。\n" +
       "この 体験版では 水素・炭素・鉄の 3ステージが 遊べるよ。(データが 大きいので、はじめの 読みこみに 時間が かかります)",
     emoji: "🧪", color: "#4aa8ff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     controls: {
       pc: [
         { key: "↑ / ↓", action: "前へ / 後ろへ" },
@@ -379,7 +379,7 @@ window.KUMATA_GAMES = [
       "円盤の 外に 落ちたら ゲームオーバー。1ステージ 5段、制限時間は 120秒。早く クリアするほど ボーナス点!\n" +
       "上下に 動く じゃま物や、くるくる 回る 円盤も… 全5ステージに チャレンジしよう。",
     emoji: "🔴", color: "#e53935",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "BallDown.apk",
     youtube: "https://youtube.com/shorts/nF_6JgFXe6U",
     controls: {
@@ -407,7 +407,7 @@ window.KUMATA_GAMES = [
       "5秒たつと トラに かまれる!天井・落ちてくる岩や雷・海にも 気をつけて。\n" +
       "すべる氷山、しずむ葉っぱ、重くなる白い雲、運ばれる虹… 21面からは 風と雨も!全30面に チャレンジしよう。",
     emoji: "🐯", color: "#ff9a3c",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     controls: {
       pc: [
         { key: "ドラッグ", action: "板を しならせる → はなして ジャンプ" },
@@ -438,7 +438,7 @@ window.KUMATA_GAMES = [
       "スピン・宙返り・グラブなど 技の むずかしさ、できばえ、着地の きれいさで 点数が つくよ。\n" +
       "好きな技で 採点される「FREE」と、お題の技に いどむ「CHALLENGE」の 2モード。スキーと スノーボードの キャラから えらべるよ。",
     emoji: "⛷️", color: "#7fd3ff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     controls: {
       pc: [
         { key: "W / S", action: "加速 / ブレーキ" },
@@ -477,7 +477,7 @@ window.KUMATA_GAMES = [
       "ボールを 相手のゴールに 入れるか、弾を 相手に 当てると 1点。弾が へったら、ボールを 壁に 当てると 回復するよ。\n" +
       "「SOLO」は CPU対戦(強さ 5段階)、「DUO」は オンラインで 2人対戦!",
     emoji: "🏒", color: "#ff5c5c",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "BallHockey.apk",
     googlePlay: GOOGLE_PLAY + "com.kumata.ballhockey2",
     youtube: "https://youtube.com/shorts/CrxS8t9G-2U",
@@ -508,7 +508,7 @@ window.KUMATA_GAMES = [
       "取った駒は 盤に 打って つかえる!のこった駒と 取った駒の 数で 点数が きまるよ。\n" +
       "ソロ(AI対戦)・デュオ(2人)・トリオ(3人)の オンライン対戦。「待った」の あり / なしも えらべるよ。",
     emoji: "♟️", color: "#9c7bff",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "hasamin.apk",
     googlePlay: GOOGLE_PLAY + "com.kumata.hasamin",
     youtube: "https://youtube.com/shorts/RaU-YiXW5iQ",
@@ -541,7 +541,7 @@ window.KUMATA_GAMES = [
       "岩を おすたびに 体力を つかう!バナナで 回復しながら、どの岩を おすか よく考えよう。\n" +
       "追いかけてくる スライムは 岩で はさんで やっつけろ!11×11マスから 101×101マスの 大迷路まで、全10ステージ。",
     emoji: "🦍", color: "#8d6e63",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "GoritaDaidasso.apk",
     youtube: "https://youtube.com/shorts/Gyq7auhMUlI",
     controls: {
@@ -572,7 +572,7 @@ window.KUMATA_GAMES = [
       "上がったブロックは 壁、下がったブロックは 通路。叩くたびに 迷路の かたちが ガラッと かわるよ。\n" +
       "スライムは ゴリタが 1歩 動くたびに 1歩 動く ターン制。落とし穴に ハメながら ゴールを めざそう!全10ステージ。",
     emoji: "🦍", color: "#ffd23f",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "GoritaDaidasso2.apk",
     youtube: "https://youtube.com/shorts/8G6xtOghUmY",
     controls: {
@@ -606,7 +606,7 @@ window.KUMATA_GAMES = [
       "岩で 道を ふさいで、おいかけてくる スライムを よけながら 光る ゴールの とびらを めざそう。\n" +
       "バナナを 使えば 前の 岩を こわせる!迷路は だんだん 大きくなって、最後は 101×101。全30ステージ!",
     emoji: "🦍", color: "#8d6e63",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "GoritaDaidasso3.apk",
     youtube: "https://youtube.com/shorts/yIU4yRxzO80",
     controls: {
@@ -638,7 +638,7 @@ window.KUMATA_GAMES = [
       "赤い扉は ステージの 赤い扉が ぜんぶ いっしょに 回る。白い扉は その扉だけ。\n" +
       "手持ちの 扉 3まいと 入れかえることも できるよ(白か 赤か えらべる)。光る ゴールの とびらを めざせ!全10ステージ。",
     emoji: "🚪", color: "#c0392b",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "GoritaDaidasso4.apk",
     youtube: "https://youtube.com/shorts/6TZkSuFnfNA",
     controls: {
@@ -673,7 +673,7 @@ window.KUMATA_GAMES = [
       "先の命令を 読んで、ぶつからないように すすもう。おうちに 着けば クリア!\n" +
       "全10ステージ。少ない 手数ほど 上位の ランキングも あるよ。",
     emoji: "🐱", color: "#ff6b9d",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "CatsWayHome.apk",
     youtube: "https://youtube.com/shorts/8Qdqi3AG8CU",
     controls: {
@@ -707,7 +707,7 @@ window.KUMATA_GAMES = [
       "1手ごとに「ねこを 1マス 歩かせる」か「マスを 1枚 スライドする」を えらぶよ。1手ごとに スライムが 近づいてくるから 気をつけて!\n" +
       "盤は 5×5 → 7×7 → 9×9 と だんだん 大きくなるよ。",
     emoji: "🏠", color: "#ffb347",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "CatsWayHome2.apk",
     youtube: "https://youtube.com/shorts/KI4bfEap1yA",
     controls: {
@@ -740,7 +740,7 @@ window.KUMATA_GAMES = [
       "海を 流れる 氷を ジャンプで わたって いくけど、氷には 重さの 限界が あって、乗りすぎると 割れちゃう。\n" +
       "キツネの いたずら、セイウチの 大波、シロクマの 重さ… でも アザラシは ピンチを 助けてくれる 味方だよ。迷子1〜10 の 全10ステージ!",
     emoji: "🐧", color: "#7ec8e3",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "LittleLostPenguin.apk",
     youtube: "https://youtube.com/shorts/pB1l--dGgDQ",
     controls: {
@@ -771,7 +771,7 @@ window.KUMATA_GAMES = [
       "色には 強さの じゅんばん(黄 ▶ 青 ▶ 緑 ▶ 赤 ▶ 黄)が あって、かわった マスが となりの 色を 食べて 連鎖するよ(3連鎖まで)。\n" +
       "線は 10本。青の マスを どれだけ ふやせるかな?同じ マス数なら タイムが はやい ほうが 上の ランキングに チャレンジ!",
     emoji: "🎨", color: "#ffd166",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "ColorColor.apk",
     youtube: "https://youtube.com/shorts/hLyDmrknhoI",
     controls: {
@@ -803,7 +803,7 @@ window.KUMATA_GAMES = [
       "色の 点数(+1 / 0 / -1 / -5)は 毎回 かわるよ。とどかないと -1、合計 -7 で ゲームオーバー。\n" +
       "消える 突起、くずれる 雪、反り返った 壁… 全10ステージ。ゴールの あとは 登りかたの リプレイも 見られるよ!",
     emoji: "🧗", color: "#e07a5f",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "ClimbClimb.apk",
     youtube: "https://youtube.com/shorts/tluLqgayFfw",
     controls: {
@@ -839,7 +839,7 @@ window.KUMATA_GAMES = [
       "どんぐりを 持った リスに かぶせると 取り返せる。でも 持っていない リスに かぶせると かまれて -1…\n" +
       "落ち葉の モコモコは もぐった リス! 巣に どんぐりが たまると ゲームオーバー。全5ステージ。",
     emoji: "🌰", color: "#b5733a",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "DonguriSoudatsu.apk",
     youtube: "https://youtube.com/shorts/FkTmX9sAdtg",
     controls: {
@@ -869,7 +869,7 @@ window.KUMATA_GAMES = [
       "動力の 赤・青の 歯車に 白い 歯車を かみ合わせると 回りだす。かみ合った 歯車は 反対向きに 回るよ。\n" +
       "玉は 箱の 前の 絵と 同じ 箱へ! 少ない ポイントで クリアするほど ★が ふえる。全25ステージ。",
     emoji: "⚙️", color: "#e5533d",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "GearBall.apk",
     youtube: "https://youtube.com/shorts/CwalSCZu4Mg",
     controls: {
@@ -900,7 +900,7 @@ window.KUMATA_GAMES = [
       "命中した マスは 青く 光るよ。敵は 毎ターン 1マス 動いたり 向きを かえたり、フェイントも してくる。\n" +
       "敵艦が 潜水艦の 列まで 来たら ゲームオーバー! 15×15(ふつう)と 21×21(むずかしい)、各10面。さいごは リプレイで 敵の 動きが 見られるよ。",
     emoji: "🚢", color: "#2a6fb8",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg"],
     apk: APK_RELEASE + "Sensuikan.apk",
     youtube: "https://youtube.com/shorts/xhCfV9N3XAU",
     controls: {
@@ -932,7 +932,7 @@ window.KUMATA_GAMES = [
       "大きな 冷蔵庫を あけて 食材を えらび、台の 上で 切る・混ぜる・焼く・煮る・揚げる… 11の 調理方法と 時間を 考えて「完成!」。\n" +
       "食材・工程・順番・時間で 採点、70点 以上で 合格。初級・中級・上級 全30品、できなかったら 模範解答も 見られるよ。",
     emoji: "🍳", color: "#e8a24a",
-    screenshots: [],
+    screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
     controls: {
       pc: [
         { key: "冷蔵庫 → 食材を クリック", action: "つかう 食材を えらぶ(ドラッグ / ホイールで 上下)" },
