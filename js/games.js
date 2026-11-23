@@ -965,6 +965,7 @@ window.KUMATA_GAMES = [
       "カメラを まわして 上から 横から 考えよう。少ない ブロックで クリアすると ★3つ。初級〜超上級 全60ステージ。",
     emoji: "🧱", color: "#3d8be5",
     screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
+    youtube: "https://youtube.com/shorts/iXDpQw2ehDY",
     controls: {
       pc: [
         { key: "左の ブロック → 置く場所を クリック", action: "ブロックを 置く(「置く高さ」で 段を えらぶ)" },
