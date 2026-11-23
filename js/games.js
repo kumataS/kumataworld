@@ -932,6 +932,7 @@ window.KUMATA_GAMES = [
       "大きな 冷蔵庫を あけて 食材を えらび、台の 上で 切る・混ぜる・焼く・煮る・揚げる… 11の 調理方法と 時間を 考えて「完成!」。\n" +
       "食材・工程・順番・時間で 採点、70点 以上で 合格。初級・中級・上級 全30品、できなかったら 模範解答も 見られるよ。",
     emoji: "🍳", color: "#e8a24a",
+    apk: APK_RELEASE + "KumataCook.apk",
     screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
     controls: {
       pc: [
