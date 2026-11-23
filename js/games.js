@@ -933,6 +933,7 @@ window.KUMATA_GAMES = [
       "食材・工程・順番・時間で 採点、70点 以上で 合格。初級・中級・上級 全30品、できなかったら 模範解答も 見られるよ。",
     emoji: "🍳", color: "#e8a24a",
     apk: APK_RELEASE + "KumataCook.apk",
+    youtube: "https://youtube.com/shorts/2UbcZgOz2sc",
     screenshots: ["ss1.jpg", "ss2.jpg", "ss3.jpg", "ss4.jpg", "ss5.jpg"],
     controls: {
       pc: [
